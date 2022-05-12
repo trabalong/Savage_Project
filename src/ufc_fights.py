@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # Ponemos nombres en mayúsculas
 def set_names_upper(data):
@@ -24,7 +25,7 @@ def fix_columns(data):
     #col_posiblementeborrar = [Height|Weight|Reach|_age|_Stance|win_by|wins|losses|draw|total_time|total_rounds|
     #                           total_title|TD_att|TD_landed|]
     col1 = data.columns[
-        data.columns.str.contains('avg_opp|GROUND|Referee')]
+        data.columns.str.contains('avg_opp|GROUND|Referee|Location')]
 
     col2 = data.columns[data.columns.str.contains('SIG_STR_att|SIG_STR_landed')]
 
@@ -58,32 +59,25 @@ def fix_columns(data):
 
     data.date = pd.to_datetime(data.date)
 
-# Referee será Unknown y los datos estadísticos de los combates serán 0
+# Valores numéricos por su mediana y valores categóricos por su mode
 def set_nan_columns(data):
-
-    data.Referee.fillna('Unknown', inplace = True)
-
-    data[['B_avg_KD', 'B_avg_SIG_STR_pct',
-           'B_avg_TD_pct', 'B_avg_SUB_ATT', 'B_avg_REV',
-           'B_avg_CTRL_time(seconds)', 'R_avg_KD', 'R_avg_SIG_STR_pct',
-           'R_avg_TD_pct', 'R_avg_SUB_ATT', 'R_avg_REV',
-           'R_avg_CTRL_time(seconds)', 'B_PCT_STRIKES', 'R_PCT_STRIKES',
-           'B_PCT_HEAD', 'R_PCT_HEAD', 'B_PCT_BODY', 'R_PCT_BODY', 'B_PCT_LEG',
-           'R_PCT_LEG', 'B_PCT_DISTANCE', 'R_PCT_DISTANCE', 'B_PCT_CLINCH',
-           'R_PCT_CLINCH', 'B_PCT_GROUND', 'R_PCT_GROUND']] =\
-    data[['B_avg_KD', 'B_avg_SIG_STR_pct',
-           'B_avg_TD_pct', 'B_avg_SUB_ATT', 'B_avg_REV',
-           'B_avg_CTRL_time(seconds)', 'R_avg_KD', 'R_avg_SIG_STR_pct',
-           'R_avg_TD_pct', 'R_avg_SUB_ATT', 'R_avg_REV',
-           'R_avg_CTRL_time(seconds)', 'B_PCT_STRIKES', 'R_PCT_STRIKES',
-           'B_PCT_HEAD', 'R_PCT_HEAD', 'B_PCT_BODY', 'R_PCT_BODY', 'B_PCT_LEG',
-           'R_PCT_LEG', 'B_PCT_DISTANCE', 'R_PCT_DISTANCE', 'B_PCT_CLINCH',
-           'R_PCT_CLINCH', 'B_PCT_GROUND', 'R_PCT_GROUND']].fillna(0)
+    
+    for c in data.columns:
+        
+        if data[c].isnull().sum()>0 and not np.dtype(data[c]) is np.dtype(np.object):
+            
+            data[c] = data[c].fillna(data[c].median())
+            
+    for c in data.columns:
+        
+        if data[c].isnull().sum()>0 and np.dtype(data[c]) is np.dtype(np.object):
+            
+            data[c] = data[c].fillna(data[c].mode().values[0])
 
     data.rename(columns={'B_avg_CTRL_time(seconds)': 'B_avg_CTRL_time', 'R_avg_CTRL_time(seconds)': 'R_avg_CTRL_time'},
                 inplace=True)
 
-    data.insert(0, 'event_id', [i for i in range(len(data))])
+    data.insert(0, 'fight_id', [i for i in range(len(data))])
 
 # Añadir id de los luchadores
 def add_fighterid(data2,fighters2):
