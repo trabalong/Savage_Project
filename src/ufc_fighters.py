@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Scrapea peleadores oficiales de la UFC
-def load_ufc():
+def load_ufc_fighters():
 
     driver=webdriver.Chrome(ChromeDriverManager().install())
     driver.get('https://www.ufcespanol.com/athletes/all')
@@ -97,6 +97,7 @@ def set_fighter_upper(fighter):
 
 # Filtro data de luchadores por luchadores oficiales, modifico columnas y hago fillna
 def clean_fighters(fighter,ufc_fighters):
+    
 
     col_order = ['fighter_id','Name','DOB','Wins','Losses','Draws','Categoría','Height_cm','Weight_kg','Reach_cm','Stance',
              'SLpM','Str_Acc','SApM','Str_Def','TD_Avg','TD_Acc','TD_Def','Sub_Avg']
@@ -143,4 +144,112 @@ def clean_fighters(fighter,ufc_fighters):
 
     return x
 
-load_ufc()
+# Scrapea peleadores oficiales de la UFC que contengan el estilo de lucha
+def load_ufc_fighters_styles():
+
+    driver=webdriver.Chrome(ChromeDriverManager().install())
+    driver.get('https://www.ufcespanol.com/athletes/all')
+
+    lista = []
+    dictionary = {}
+    nombre, categoria, record, style = [], [], [], []
+    count = 0
+    styles = ['MMA','Grappler','Taekwondo','Kung Fu','Sambo','Brawler','Judo','Karate','Wrestler','Boxing','Freestyle',
+            'Brazilian Jiu-Jitsu','Boxer','Kickboxer','Wrestling','Jiu-Jitsu','Muay Thai','Striker','Kung-Fu']
+
+    # Checkea si existe un xpath
+    def check_xpath(xpath):
+        try:
+            driver.find_element_by_xpath(xpath)
+        except:
+            return False
+        return True
+
+    for i in range(2,21):
+        
+        time.sleep(5)
+        driver.find_element_by_xpath('//*[@id="block-mainpagecontent"]/div/div/div[2]/div/div/div/div[2]/a').click()
+        time.sleep(5)
+        try:
+            driver.execute_script("arguments[0].scrollIntoView();",
+                                driver.find_element_by_xpath('//*[@id="block-mainpagecontent"]/div/aside/div[2]/div[2]/div/div[3]/div[2]/ul/li[14]'))
+        except:
+            time.sleep(5)
+            driver.execute_script("arguments[0].scrollIntoView();",
+                                driver.find_element_by_xpath('//*[@id="block-mainpagecontent"]/div/aside/div[2]/div[2]/div/div[3]/div[2]/ul/li[14]'))
+
+
+        try:
+            driver.find_element_by_xpath(f'//*[@id="block-mainpagecontent"]/div/aside/div[2]/div[2]/div/div[3]/div[2]/ul/li[{i}]').click()
+        except:
+            time.sleep(5)
+            driver.find_element_by_xpath(f'//*[@id="block-mainpagecontent"]/div/aside/div[2]/div[2]/div/div[3]/div[2]/ul/li[{i}]').click()
+
+        time.sleep(5)
+
+        try:
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        except:
+            time.sleep(5)
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+        while (check_xpath('//*[@id="block-mainpagecontent"]/div/div/div[2]/div/div/ul/li/a')):
+
+            try:
+                driver.find_element_by_xpath('//*[@id="block-mainpagecontent"]/div/div/div[2]/div/div/ul/li/a').click()
+            except:
+                time.sleep(5)
+
+        x = driver.find_elements_by_class_name('l-flex__item')
+
+        for i in x:
+
+            lista.append(i.text)
+
+        dictionary[styles[count]] = lista
+        count += 1
+        lista = []
+
+        driver.execute_script("arguments[0].scrollIntoView();",driver.find_element_by_xpath('//*[@id="edit-gender--wrapper"]/div'))
+        time.sleep(5)
+        driver.find_element_by_xpath('//*[@id="views-exposed-form-all-athletes-page"]/div/div[1]/div/div/span[3]').click()
+        time.sleep(5)
+        try:
+            driver.find_element_by_xpath('//*[@id="views-exposed-form-all-athletes-page"]/div/div[1]/div/ul/li[1]/div/a').click()
+        except:
+            time.sleep(5)
+            driver.find_element_by_xpath('//*[@id="views-exposed-form-all-athletes-page"]/div/div[1]/div/ul/li[1]/div/a').click()
+
+    # Capturar solo el nombre, categoría, record y estilo de lucha de cada luchador
+    for k in dictionary.keys():
+        
+        for i in dictionary[k]:
+
+            if ('\nSEGUIR' in i) or ('\nPERFIL DE ATLETA' in i):
+                i = i.replace('\nSEGUIR', '').replace('\nPERFIL DE ATLETA', '')
+
+            i = i.split('\n')
+
+            if len(i) > 3:
+
+                if len(i) == 4:
+
+                    nombre.append(i[:-1][0])
+                    categoria.append(i[:-1][1])
+                    record.append(i[:-1][2])
+                    style.append(k)
+
+                else:
+
+                    nombre.append(i[1:-2][0])
+                    categoria.append(i[1:-2][1])
+                    record.append(i[1:-2][2])
+                    style.append(k)
+
+    # Paso todos los datos a csv
+    a = pd.DataFrame(nombre, columns = ['Name'])
+    b = pd.DataFrame(categoria, columns = ['Category'])
+    c = pd.DataFrame(record, columns = ['Record'])
+    d = pd.DataFrame(style, columns = ['Style'])
+    x = pd.concat([a,b,c,d], axis = 1)
+    x.to_csv(r'..data\ufc_fighters_styles.csv')
