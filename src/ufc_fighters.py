@@ -142,3 +142,5 @@ def clean_fighters(fighter,ufc_fighters):
     x = x[col_order]
 
     return x
+
+load_ufc()

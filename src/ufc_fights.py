@@ -32,26 +32,26 @@ def fix_columns(data):
     col3 = data.columns[
         data.columns.str.contains('longest|current|TOTAL_STR|HEAD|BODY|LEG|DISTANCE|CLINCH')]
 
-    data['B_PCT_STRIKES'] = round((data.B_avg_TOTAL_STR_landed / (data.B_avg_TOTAL_STR_att + data.B_avg_TOTAL_STR_landed)) * 100)
-    data['R_PCT_STRIKES'] = round((data.R_avg_TOTAL_STR_landed / (data.R_avg_TOTAL_STR_att + data.R_avg_TOTAL_STR_landed)) * 100)
+    data['B_PCT_STRIKES'] = round((data.B_avg_TOTAL_STR_landed / (data.B_avg_TOTAL_STR_att)) * 100)
+    data['R_PCT_STRIKES'] = round((data.R_avg_TOTAL_STR_landed / (data.R_avg_TOTAL_STR_att)) * 100)
 
-    data['B_PCT_HEAD'] = round((data.B_avg_HEAD_landed / (data.B_avg_HEAD_att + data.B_avg_HEAD_landed)) * 100)
-    data['R_PCT_HEAD'] = round((data.R_avg_HEAD_landed / (data.R_avg_HEAD_att + data.R_avg_HEAD_landed)) * 100)
+    data['B_PCT_HEAD'] = round((data.B_avg_HEAD_landed / (data.B_avg_HEAD_att)) * 100)
+    data['R_PCT_HEAD'] = round((data.R_avg_HEAD_landed / (data.R_avg_HEAD_att)) * 100)
 
-    data['B_PCT_BODY'] = round((data.B_avg_BODY_landed / (data.B_avg_BODY_att + data.B_avg_BODY_landed)) * 100)
-    data['R_PCT_BODY'] = round((data.R_avg_BODY_landed / (data.R_avg_BODY_att + data.R_avg_BODY_landed)) * 100)
+    data['B_PCT_BODY'] = round((data.B_avg_BODY_landed / (data.B_avg_BODY_att)) * 100)
+    data['R_PCT_BODY'] = round((data.R_avg_BODY_landed / (data.R_avg_BODY_att)) * 100)
 
-    data['B_PCT_LEG'] = round((data.B_avg_LEG_landed / (data.B_avg_LEG_att + data.B_avg_LEG_landed)) * 100)
-    data['R_PCT_LEG'] = round((data.R_avg_LEG_landed / (data.R_avg_LEG_att + data.R_avg_LEG_landed)) * 100)
+    data['B_PCT_LEG'] = round((data.B_avg_LEG_landed / (data.B_avg_LEG_att)) * 100)
+    data['R_PCT_LEG'] = round((data.R_avg_LEG_landed / (data.R_avg_LEG_att)) * 100)
 
-    data['B_PCT_DISTANCE'] = round((data.B_avg_DISTANCE_landed / (data.B_avg_DISTANCE_att + data.B_avg_DISTANCE_landed)) * 100)
-    data['R_PCT_DISTANCE'] = round((data.R_avg_DISTANCE_landed / (data.R_avg_DISTANCE_att + data.R_avg_DISTANCE_landed)) * 100)
+    data['B_PCT_DISTANCE'] = round((data.B_avg_DISTANCE_landed / (data.B_avg_DISTANCE_att)) * 100)
+    data['R_PCT_DISTANCE'] = round((data.R_avg_DISTANCE_landed / (data.R_avg_DISTANCE_att)) * 100)
 
-    data['B_PCT_CLINCH'] = round((data.B_avg_CLINCH_landed / (data.B_avg_CLINCH_att + data.B_avg_CLINCH_landed)) * 100)
-    data['R_PCT_CLINCH'] = round((data.R_avg_CLINCH_landed / (data.R_avg_CLINCH_att + data.R_avg_CLINCH_landed)) * 100)
+    data['B_PCT_CLINCH'] = round((data.B_avg_CLINCH_landed / (data.B_avg_CLINCH_att)) * 100)
+    data['R_PCT_CLINCH'] = round((data.R_avg_CLINCH_landed / (data.R_avg_CLINCH_att)) * 100)
 
-    data['B_PCT_GROUND'] = round((data.B_avg_GROUND_landed / (data.B_avg_GROUND_att + data.B_avg_GROUND_landed)) * 100)
-    data['R_PCT_GROUND'] = round((data.R_avg_GROUND_landed / (data.R_avg_GROUND_att + data.R_avg_GROUND_landed)) * 100)
+    data['B_PCT_GROUND'] = round((data.B_avg_GROUND_landed / (data.B_avg_GROUND_att)) * 100)
+    data['R_PCT_GROUND'] = round((data.R_avg_GROUND_landed / (data.R_avg_GROUND_att)) * 100)
 
     col_todrop = col1.append(col2).append(col3)
 
@@ -74,8 +74,9 @@ def set_nan_columns(data):
             
             data[c] = data[c].fillna(data[c].mode().values[0])
 
-    data.rename(columns={'B_avg_CTRL_time(seconds)': 'B_avg_CTRL_time', 'R_avg_CTRL_time(seconds)': 'R_avg_CTRL_time'},
-                inplace=True)
+    data.rename(columns={'B_avg_CTRL_time(seconds)':'B_avg_CTRL_time', 'R_avg_CTRL_time(seconds)':'R_avg_CTRL_time',
+                         'B_total_time_fought(seconds)':'B_total_time_fought',
+                         'R_total_time_fought(seconds)':'R_total_time_fought'}, inplace=True)
 
     data.insert(0, 'fight_id', [i for i in range(len(data))])
 
