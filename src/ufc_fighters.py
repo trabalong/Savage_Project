@@ -99,10 +99,10 @@ def set_fighter_upper(fighter):
 def clean_fighters(fighter,ufc_fighters):
     
 
-    col_order = ['fighter_id','Name','DOB','Wins','Losses','Draws','Categoría','Height_cm','Weight_kg','Reach_cm','Stance',
+    col_order = ['fighter_id','Name','Style','DOB','Wins','Losses','Draws','Categoría','Height_cm','Weight_kg','Reach_cm','Stance',
              'SLpM','Str_Acc','SApM','Str_Def','TD_Avg','TD_Acc','TD_Def','Sub_Avg']
 
-    x = fighter.set_index('fighter_name').join(ufc_fighters[['Nombres', 'Categoría', 'Record']].set_index('Nombres'),
+    x = fighter.set_index('fighter_name').join(ufc_fighters[['Nombres','Categoría','Record','Style']].set_index('Nombres'),
                                                rsuffix='_dcha', how='inner')
 
     x['Name'] = x.index
@@ -141,6 +141,19 @@ def clean_fighters(fighter,ufc_fighters):
     x.insert(0, 'fighter_id', [i for i in range(len(x))])
 
     x = x[col_order]
+
+    # Transformaciones en la columna Style
+    x.Style = x.Style.fillna('MMA')
+    x.Style[x.Style.str.contains('Brazilian')] = 'Jiu-Jitsu'
+    x.Style[x.Style.str.contains('Boxer')] = 'Boxing'
+    x.Style[x.Style.str.contains('Wrestler')] = 'Wrestling'
+    x.Style[x.Style.str.contains('Kung')] = 'Kung-Fu'
+
+    # Añadir columna para los estilos generales de MMA
+    x.insert(3, 'MMA_Style', '')
+    x.MMA_Style[x.Style.str.contains('Freestyle|Jiu-Jitsu|Wrestling|Grappler|Judo|Sambo')] = 'GRAPPLING'
+    x.MMA_Style[x.Style.str.contains('Striker|Muay Thai|Boxing|Kickboxer|Karate|Kung-Fu|Taekwondo')] = 'STRIKING'
+    x.MMA_Style[x.Style.str.contains('MMA|Brawler')] = 'SWITCH'
 
     return x
 
