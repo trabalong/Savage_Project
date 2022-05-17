@@ -1,0 +1,2300 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20221.22.0324.2209                               -->
+<workbook original-version='18.1' source-build='2022.1.0 (20221.22.0324.2209)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='fighters+ (ufc_predictions_db)' inline='true' name='federated.0rqlsrf0m2ciyj178ck1k057rvb6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mysql.1lboavo07ywwux1c9qidy0cgk87f'>
+            <connection class='mysql' dbname='ufc_predictions_db' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.1lboavo07ywwux1c9qidy0cgk87f' name='fighters' table='[fighters]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='mysql.1lboavo07ywwux1c9qidy0cgk87f' name='fighters' table='[fighters]' type='table' />
+          <relation connection='mysql.1lboavo07ywwux1c9qidy0cgk87f' name='fights' table='[fights]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>fighter_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[fighter_id]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>fighter_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Style</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Style]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Style</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MMA_Style</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[MMA_Style]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>MMA_Style</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DOB</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DOB]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>DOB</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wins</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Wins]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Wins</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Losses</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Losses]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Losses</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Draws</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Draws]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Draws</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Categoría</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Categoría]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Categoría</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Height_cm</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[Height_cm]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Height_cm</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weight_kg</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[Weight_kg]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Weight_kg</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Reach_cm</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[Reach_cm]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Reach_cm</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stance</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stance]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Stance</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SLpM</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[SLpM]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>SLpM</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Str_Acc</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[Str_Acc]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Str_Acc</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SApM</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[SApM]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>SApM</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Str_Def</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[Str_Def]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Str_Def</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TD_Avg</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[TD_Avg]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>TD_Avg</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TD_Acc</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[TD_Acc]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>TD_Acc</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TD_Def</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[TD_Def]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>TD_Def</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub_Avg</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[Sub_Avg]</local-name>
+            <parent-name>[fighters]</parent-name>
+            <remote-alias>Sub_Avg</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fighters_1A5D8690F0C942F380AFD0B798A4E602]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fight_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[fight_id]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>fight_id</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_fighter</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[R_fighter]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_fighter</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_fighter</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[B_fighter]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_fighter</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Winner</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Winner]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>Winner</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_bout</remote-name>
+            <remote-type>16</remote-type>
+            <local-name>[title_bout]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>title_bout</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>3</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TINYINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_STINYINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weight_class</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[weight_class]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>weight_class</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_KD</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_KD]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_KD</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_SIG_STR_pct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_SIG_STR_pct]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_SIG_STR_pct</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_TD_pct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_TD_pct]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_TD_pct</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_SUB_ATT</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_SUB_ATT]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_SUB_ATT</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_REV</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_REV]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_REV</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_TD_att</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_TD_att]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_TD_att</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_TD_landed</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_TD_landed]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_TD_landed</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_avg_CTRL_time</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_avg_CTRL_time]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_avg_CTRL_time</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_total_time_fought</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_total_time_fought]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_total_time_fought</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_total_rounds_fought</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_total_rounds_fought]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_total_rounds_fought</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_total_title_bouts</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_total_title_bouts]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_total_title_bouts</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_wins</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_wins]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_wins</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_losses</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_losses]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_losses</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_win_by_Decision_Majority</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_win_by_Decision_Majority]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_win_by_Decision_Majority</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_win_by_Decision_Split</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_win_by_Decision_Split]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_win_by_Decision_Split</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_win_by_Decision_Unanimous</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_win_by_Decision_Unanimous]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_win_by_Decision_Unanimous</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_win_by_KO</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_win_by_KO]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_win_by_KO</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_win_by_Submission</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_win_by_Submission]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_win_by_Submission</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_win_by_TKO_Doctor_Stoppage</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_win_by_TKO_Doctor_Stoppage]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_win_by_TKO_Doctor_Stoppage</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_Stance</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[B_Stance]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_Stance</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_Height_cms</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_Height_cms]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_Height_cms</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_Reach_cms</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_Reach_cms]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_Reach_cms</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_Weight_lbs</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_Weight_lbs]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_Weight_lbs</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_KD</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_KD]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_KD</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_SIG_STR_pct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_SIG_STR_pct]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_SIG_STR_pct</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_TD_pct</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_TD_pct]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_TD_pct</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_SUB_ATT</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_SUB_ATT]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_SUB_ATT</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_REV</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_REV]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_REV</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_TD_att</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_TD_att]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_TD_att</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_TD_landed</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_TD_landed]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_TD_landed</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_avg_CTRL_time</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_avg_CTRL_time]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_avg_CTRL_time</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_total_time_fought</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_total_time_fought]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_total_time_fought</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_total_rounds_fought</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_total_rounds_fought]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_total_rounds_fought</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_total_title_bouts</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_total_title_bouts]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_total_title_bouts</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_wins</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_wins]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_wins</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_losses</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_losses]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_losses</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_win_by_Decision_Majority</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_win_by_Decision_Majority]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_win_by_Decision_Majority</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_win_by_Decision_Split</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_win_by_Decision_Split]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_win_by_Decision_Split</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_win_by_Decision_Unanimous</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_win_by_Decision_Unanimous]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_win_by_Decision_Unanimous</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_win_by_KO</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_win_by_KO]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_win_by_KO</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_win_by_Submission</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_win_by_Submission]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_win_by_Submission</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_win_by_TKO_Doctor_Stoppage</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_win_by_TKO_Doctor_Stoppage]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_win_by_TKO_Doctor_Stoppage</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_Stance</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[R_Stance]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_Stance</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_Height_cms</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_Height_cms]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_Height_cms</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_Reach_cms</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_Reach_cms]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_Reach_cms</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_Weight_lbs</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_Weight_lbs]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_Weight_lbs</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_age</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[B_age]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_age</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_age</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[R_age]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_age</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_PCT_STRIKES</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_PCT_STRIKES]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_PCT_STRIKES</remote-alias>
+            <ordinal>81</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_PCT_STRIKES</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_PCT_STRIKES]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_PCT_STRIKES</remote-alias>
+            <ordinal>82</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_PCT_HEAD</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_PCT_HEAD]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_PCT_HEAD</remote-alias>
+            <ordinal>83</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_PCT_HEAD</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_PCT_HEAD]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_PCT_HEAD</remote-alias>
+            <ordinal>84</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_PCT_BODY</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_PCT_BODY]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_PCT_BODY</remote-alias>
+            <ordinal>85</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_PCT_BODY</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_PCT_BODY]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_PCT_BODY</remote-alias>
+            <ordinal>86</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_PCT_LEG</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_PCT_LEG]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_PCT_LEG</remote-alias>
+            <ordinal>87</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_PCT_LEG</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_PCT_LEG]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_PCT_LEG</remote-alias>
+            <ordinal>88</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_PCT_DISTANCE</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_PCT_DISTANCE]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_PCT_DISTANCE</remote-alias>
+            <ordinal>89</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_PCT_DISTANCE</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_PCT_DISTANCE]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_PCT_DISTANCE</remote-alias>
+            <ordinal>90</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_PCT_CLINCH</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_PCT_CLINCH]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_PCT_CLINCH</remote-alias>
+            <ordinal>91</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_PCT_CLINCH</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_PCT_CLINCH]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_PCT_CLINCH</remote-alias>
+            <ordinal>92</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>B_PCT_GROUND</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[B_PCT_GROUND]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>B_PCT_GROUND</remote-alias>
+            <ordinal>93</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R_PCT_GROUND</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[R_PCT_GROUND]</local-name>
+            <parent-name>[fights]</parent-name>
+            <remote-alias>R_PCT_GROUND</remote-alias>
+            <ordinal>94</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fights_01C9A0DAAB1D47148B81EB62E8D082E7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='B Height cms' datatype='real' name='[B_Height_cms]' role='measure' type='quantitative' />
+      <column caption='B Pct Body' datatype='real' name='[B_PCT_BODY]' role='measure' type='quantitative' />
+      <column caption='B Pct Clinch' datatype='real' name='[B_PCT_CLINCH]' role='measure' type='quantitative' />
+      <column caption='B Pct Distance' datatype='real' name='[B_PCT_DISTANCE]' role='measure' type='quantitative' />
+      <column caption='B Pct Ground' datatype='real' name='[B_PCT_GROUND]' role='measure' type='quantitative' />
+      <column caption='B Pct Head' datatype='real' name='[B_PCT_HEAD]' role='measure' type='quantitative' />
+      <column caption='B Pct Leg' datatype='real' name='[B_PCT_LEG]' role='measure' type='quantitative' />
+      <column caption='B Pct Strikes' datatype='real' name='[B_PCT_STRIKES]' role='measure' type='quantitative' />
+      <column caption='B Reach cms' datatype='real' name='[B_Reach_cms]' role='measure' type='quantitative' />
+      <column caption='B Stance' datatype='string' name='[B_Stance]' role='dimension' type='nominal' />
+      <column caption='B Weight lbs' datatype='real' name='[B_Weight_lbs]' role='measure' type='quantitative' />
+      <column caption='B age' datatype='integer' name='[B_age]' role='measure' type='quantitative' />
+      <column caption='B avg CTRL time' datatype='real' name='[B_avg_CTRL_time]' role='measure' type='quantitative' />
+      <column caption='B avg KD' datatype='real' name='[B_avg_KD]' role='measure' type='quantitative' />
+      <column caption='B avg REV' datatype='real' name='[B_avg_REV]' role='measure' type='quantitative' />
+      <column caption='B avg SIG STR pct' datatype='real' name='[B_avg_SIG_STR_pct]' role='measure' type='quantitative' />
+      <column caption='B avg SUB ATT' datatype='real' name='[B_avg_SUB_ATT]' role='measure' type='quantitative' />
+      <column caption='B avg TD att' datatype='real' name='[B_avg_TD_att]' role='measure' type='quantitative' />
+      <column caption='B avg TD landed' datatype='real' name='[B_avg_TD_landed]' role='measure' type='quantitative' />
+      <column caption='B avg TD pct' datatype='real' name='[B_avg_TD_pct]' role='measure' type='quantitative' />
+      <column caption='B fighter' datatype='string' name='[B_fighter]' role='dimension' type='nominal' />
+      <column caption='B losses' datatype='integer' name='[B_losses]' role='measure' type='quantitative' />
+      <column caption='B total rounds fought' datatype='integer' name='[B_total_rounds_fought]' role='measure' type='quantitative' />
+      <column caption='B total time fought' datatype='real' name='[B_total_time_fought]' role='measure' type='quantitative' />
+      <column caption='B total title bouts' datatype='integer' name='[B_total_title_bouts]' role='measure' type='quantitative' />
+      <column caption='B win by Decision Majority' datatype='integer' name='[B_win_by_Decision_Majority]' role='measure' type='quantitative' />
+      <column caption='B win by Decision Split' datatype='integer' name='[B_win_by_Decision_Split]' role='measure' type='quantitative' />
+      <column caption='B win by Decision Unanimous' datatype='integer' name='[B_win_by_Decision_Unanimous]' role='measure' type='quantitative' />
+      <column caption='B win by KO' datatype='integer' name='[B_win_by_KO]' role='measure' type='quantitative' />
+      <column caption='B win by Submission' datatype='integer' name='[B_win_by_Submission]' role='measure' type='quantitative' />
+      <column caption='B win by TKO Doctor Stoppage' datatype='integer' name='[B_win_by_TKO_Doctor_Stoppage]' role='measure' type='quantitative' />
+      <column caption='B wins' datatype='integer' name='[B_wins]' role='measure' type='quantitative' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+        <semantic-values semantic-role='[City].[Name]'>
+          <semantic-value key='&quot;Abu Dhabi&quot;' value='&quot;Abu Dhabi&quot;' />
+          <semantic-value key='&quot;Auckland&quot;' value='&quot;Auckland&quot;' />
+          <semantic-value key='&quot;Beijing&quot;' value='&quot;Pekin&quot;' />
+          <semantic-value key='&quot;Berlin&quot;' value='&quot;Berlin&quot;' />
+          <semantic-value key='&quot;Busan&quot;' value='&quot;Busan&quot;' />
+          <semantic-value key='&quot;Chiba&quot;' value='&quot;Chiba&quot;' />
+          <semantic-value key='&quot;Copenhagen&quot;' value='&quot;Copenhagen&quot;' />
+          <semantic-value key='&quot;Dublin&quot;' value='&quot;Dublin&quot;' />
+          <semantic-value key='&quot;Gdansk&quot;' value='&quot;Gdansk&quot;' />
+          <semantic-value key='&quot;Kallang&quot;' value='&quot;Callan&quot;' />
+          <semantic-value key='&quot;Krakow&quot;' value='&quot;Krakow&quot;' />
+          <semantic-value key='&quot;Macau&quot;' value='&quot;Macau&quot;' />
+          <semantic-value key='&quot;Manila&quot;' value='&quot;Manila&quot;' />
+          <semantic-value key='&quot;Montevideo&quot;' value='&quot;Montevideo&quot;' />
+          <semantic-value key='&quot;Moscow&quot;' value='&quot;Moscú&quot;' />
+          <semantic-value key='&quot;Newcastle&quot;' value='&quot;Newcastle&quot;' />
+          <semantic-value key='&quot;Prague&quot;' value='&quot;Prague&quot;' />
+          <semantic-value key='&quot;Rio de Janeiro&quot;' value='&quot;Río de Janeiro&quot;' />
+          <semantic-value key='&quot;Rosemont&quot;' value='&quot;Rosemont&quot;' />
+          <semantic-value key='&quot;Saint Petersburg&quot;' value='&quot;Saint Petersburg&quot;' />
+          <semantic-value key='&quot;Saitama&quot;' value='&quot;Saitama&quot;' />
+          <semantic-value key='&quot;San Juan&quot;' value='&quot;San Juan&quot;' />
+          <semantic-value key='&quot;Santiago&quot;' value='&quot;Santiago&quot;' />
+          <semantic-value key='&quot;Sao Paulo&quot;' value='&quot;São Paulo&quot;' />
+          <semantic-value key='&quot;Seoul&quot;' value='&quot;Seúl&quot;' />
+          <semantic-value key='&quot;Shanghai&quot;' value='&quot;Shanghái&quot;' />
+          <semantic-value key='&quot;Singapore&quot;' value='&quot;Singapur&quot;' />
+          <semantic-value key='&quot;Stockholm&quot;' value='&quot;Stockholm&quot;' />
+          <semantic-value key='&quot;Tokyo&quot;' value='&quot;Tokio&quot;' />
+          <semantic-value key='&quot;Zagreb&quot;' value='&quot;Zagreb&quot;' />
+        </semantic-values>
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Height cm' datatype='real' name='[Height_cm]' role='measure' type='quantitative' />
+      <column caption='MMA Style' datatype='string' name='[MMA_Style]' role='dimension' type='nominal' />
+      <column caption='R Height cms' datatype='real' name='[R_Height_cms]' role='measure' type='quantitative' />
+      <column caption='R Pct Body' datatype='real' name='[R_PCT_BODY]' role='measure' type='quantitative' />
+      <column caption='R Pct Clinch' datatype='real' name='[R_PCT_CLINCH]' role='measure' type='quantitative' />
+      <column caption='R Pct Distance' datatype='real' name='[R_PCT_DISTANCE]' role='measure' type='quantitative' />
+      <column caption='R Pct Ground' datatype='real' name='[R_PCT_GROUND]' role='measure' type='quantitative' />
+      <column caption='R Pct Head' datatype='real' name='[R_PCT_HEAD]' role='measure' type='quantitative' />
+      <column caption='R Pct Leg' datatype='real' name='[R_PCT_LEG]' role='measure' type='quantitative' />
+      <column caption='R Pct Strikes' datatype='real' name='[R_PCT_STRIKES]' role='measure' type='quantitative' />
+      <column caption='R Reach cms' datatype='real' name='[R_Reach_cms]' role='measure' type='quantitative' />
+      <column caption='R Stance' datatype='string' name='[R_Stance]' role='dimension' type='nominal' />
+      <column caption='R Weight lbs' datatype='real' name='[R_Weight_lbs]' role='measure' type='quantitative' />
+      <column caption='R age' datatype='integer' name='[R_age]' role='measure' type='quantitative' />
+      <column caption='R avg CTRL time' datatype='real' name='[R_avg_CTRL_time]' role='measure' type='quantitative' />
+      <column caption='R avg KD' datatype='real' name='[R_avg_KD]' role='measure' type='quantitative' />
+      <column caption='R avg REV' datatype='real' name='[R_avg_REV]' role='measure' type='quantitative' />
+      <column caption='R avg SIG STR pct' datatype='real' name='[R_avg_SIG_STR_pct]' role='measure' type='quantitative' />
+      <column caption='R avg SUB ATT' datatype='real' name='[R_avg_SUB_ATT]' role='measure' type='quantitative' />
+      <column caption='R avg TD att' datatype='real' name='[R_avg_TD_att]' role='measure' type='quantitative' />
+      <column caption='R avg TD landed' datatype='real' name='[R_avg_TD_landed]' role='measure' type='quantitative' />
+      <column caption='R avg TD pct' datatype='real' name='[R_avg_TD_pct]' role='measure' type='quantitative' />
+      <column caption='R fighter' datatype='string' name='[R_fighter]' role='dimension' type='nominal' />
+      <column caption='R losses' datatype='integer' name='[R_losses]' role='measure' type='quantitative' />
+      <column caption='R total rounds fought' datatype='integer' name='[R_total_rounds_fought]' role='measure' type='quantitative' />
+      <column caption='R total time fought' datatype='real' name='[R_total_time_fought]' role='measure' type='quantitative' />
+      <column caption='R total title bouts' datatype='integer' name='[R_total_title_bouts]' role='measure' type='quantitative' />
+      <column caption='R win by Decision Majority' datatype='integer' name='[R_win_by_Decision_Majority]' role='measure' type='quantitative' />
+      <column caption='R win by Decision Split' datatype='integer' name='[R_win_by_Decision_Split]' role='measure' type='quantitative' />
+      <column caption='R win by Decision Unanimous' datatype='integer' name='[R_win_by_Decision_Unanimous]' role='measure' type='quantitative' />
+      <column caption='R win by KO' datatype='integer' name='[R_win_by_KO]' role='measure' type='quantitative' />
+      <column caption='R win by Submission' datatype='integer' name='[R_win_by_Submission]' role='measure' type='quantitative' />
+      <column caption='R win by TKO Doctor Stoppage' datatype='integer' name='[R_win_by_TKO_Doctor_Stoppage]' role='measure' type='quantitative' />
+      <column caption='R wins' datatype='integer' name='[R_wins]' role='measure' type='quantitative' />
+      <column caption='Reach cm' datatype='real' name='[Reach_cm]' role='measure' type='quantitative' />
+      <column caption='S Ap M' datatype='real' name='[SApM]' role='measure' type='quantitative' />
+      <column caption='S Lp M' datatype='real' name='[SLpM]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+        <semantic-values semantic-role='[State].[Name]'>
+          <semantic-value key='&quot; Saint Petersburg&quot;' value='&quot;San Petersburgo&quot;' />
+        </semantic-values>
+      </column>
+      <column caption='Str Acc' datatype='real' name='[Str_Acc]' role='measure' type='quantitative' />
+      <column caption='Str Def' datatype='real' name='[Str_Def]' role='measure' type='quantitative' />
+      <column caption='Sub Avg' datatype='real' name='[Sub_Avg]' role='measure' type='quantitative' />
+      <column caption='TD Acc' datatype='real' name='[TD_Acc]' role='measure' type='quantitative' />
+      <column caption='TD Avg' datatype='real' name='[TD_Avg]' role='measure' type='quantitative' />
+      <column caption='TD Def' datatype='real' name='[TD_Def]' role='measure' type='quantitative' />
+      <column caption='Weight kg' datatype='real' name='[Weight_kg]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fighters' datatype='table' name='[__tableau_internal_object_id__].[fighters_1A5D8690F0C942F380AFD0B798A4E602]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fights' datatype='table' name='[__tableau_internal_object_id__].[fights_01C9A0DAAB1D47148B81EB62E8D082E7]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Fight Id' datatype='integer' name='[fight_id]' role='dimension' type='ordinal' />
+      <column caption='Fighter Id' datatype='integer' name='[fighter_id]' role='dimension' type='ordinal' />
+      <column caption='Title Bout' datatype='integer' name='[title_bout]' role='measure' type='quantitative' />
+      <column caption='Weight Class' datatype='string' name='[weight_class]' role='dimension' type='nominal' />
+      <drill-paths>
+        <drill-path name='Country, State, City'>
+          <field>[Country]</field>
+          <field>[State]</field>
+          <field>[City]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='fighters' id='fighters_1A5D8690F0C942F380AFD0B798A4E602'>
+            <properties context=''>
+              <relation connection='mysql.1lboavo07ywwux1c9qidy0cgk87f' name='fighters' table='[fighters]' type='table' />
+            </properties>
+          </object>
+          <object caption='fights' id='fights_01C9A0DAAB1D47148B81EB62E8D082E7'>
+            <properties context=''>
+              <relation connection='mysql.1lboavo07ywwux1c9qidy0cgk87f' name='fights' table='[fights]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Name]' />
+              <expression op='[Winner]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='fighters_1A5D8690F0C942F380AFD0B798A4E602' unique-key='true' />
+            <second-end-point object-id='fights_01C9A0DAAB1D47148B81EB62E8D082E7' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Hoja 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fighters+ (ufc_predictions_db)' name='federated.0rqlsrf0m2ciyj178ck1k057rvb6' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0rqlsrf0m2ciyj178ck1k057rvb6'>
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+              <semantic-values semantic-role='[City].[Name]'>
+                <semantic-value key='&quot;Abu Dhabi&quot;' value='&quot;Abu Dhabi&quot;' />
+                <semantic-value key='&quot;Auckland&quot;' value='&quot;Auckland&quot;' />
+                <semantic-value key='&quot;Beijing&quot;' value='&quot;Pekin&quot;' />
+                <semantic-value key='&quot;Berlin&quot;' value='&quot;Berlin&quot;' />
+                <semantic-value key='&quot;Busan&quot;' value='&quot;Busan&quot;' />
+                <semantic-value key='&quot;Chiba&quot;' value='&quot;Chiba&quot;' />
+                <semantic-value key='&quot;Copenhagen&quot;' value='&quot;Copenhagen&quot;' />
+                <semantic-value key='&quot;Dublin&quot;' value='&quot;Dublin&quot;' />
+                <semantic-value key='&quot;Gdansk&quot;' value='&quot;Gdansk&quot;' />
+                <semantic-value key='&quot;Kallang&quot;' value='&quot;Callan&quot;' />
+                <semantic-value key='&quot;Krakow&quot;' value='&quot;Krakow&quot;' />
+                <semantic-value key='&quot;Macau&quot;' value='&quot;Macau&quot;' />
+                <semantic-value key='&quot;Manila&quot;' value='&quot;Manila&quot;' />
+                <semantic-value key='&quot;Montevideo&quot;' value='&quot;Montevideo&quot;' />
+                <semantic-value key='&quot;Moscow&quot;' value='&quot;Moscú&quot;' />
+                <semantic-value key='&quot;Newcastle&quot;' value='&quot;Newcastle&quot;' />
+                <semantic-value key='&quot;Prague&quot;' value='&quot;Prague&quot;' />
+                <semantic-value key='&quot;Rio de Janeiro&quot;' value='&quot;Río de Janeiro&quot;' />
+                <semantic-value key='&quot;Rosemont&quot;' value='&quot;Rosemont&quot;' />
+                <semantic-value key='&quot;Saint Petersburg&quot;' value='&quot;Saint Petersburg&quot;' />
+                <semantic-value key='&quot;Saitama&quot;' value='&quot;Saitama&quot;' />
+                <semantic-value key='&quot;San Juan&quot;' value='&quot;San Juan&quot;' />
+                <semantic-value key='&quot;Santiago&quot;' value='&quot;Santiago&quot;' />
+                <semantic-value key='&quot;Sao Paulo&quot;' value='&quot;São Paulo&quot;' />
+                <semantic-value key='&quot;Seoul&quot;' value='&quot;Seúl&quot;' />
+                <semantic-value key='&quot;Shanghai&quot;' value='&quot;Shanghái&quot;' />
+                <semantic-value key='&quot;Singapore&quot;' value='&quot;Singapur&quot;' />
+                <semantic-value key='&quot;Stockholm&quot;' value='&quot;Stockholm&quot;' />
+                <semantic-value key='&quot;Tokyo&quot;' value='&quot;Tokio&quot;' />
+                <semantic-value key='&quot;Zagreb&quot;' value='&quot;Zagreb&quot;' />
+              </semantic-values>
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+              <semantic-values semantic-role='[State].[Name]'>
+                <semantic-value key='&quot; Saint Petersburg&quot;' value='&quot;San Petersburgo&quot;' />
+              </semantic-values>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='fights' datatype='integer' name='[__tableau_internal_object_id__].[fights_01C9A0DAAB1D47148B81EB62E8D082E7]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[fights_01C9A0DAAB1D47148B81EB62E8D082E7]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:fights_01C9A0DAAB1D47148B81EB62E8D082E7:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='fights' datatype='table' name='[__tableau_internal_object_id__].[fights_01C9A0DAAB1D47148B81EB62E8D082E7]' role='measure' type='quantitative' />
+            <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[__tableau_internal_object_id__].[cnt:fights_01C9A0DAAB1D47148B81EB62E8D082E7:qk]' field-type='quantitative' max-size='1' min-size='0' type='quantsize' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:City:nk]' value='false' />
+            <format attr='break-on-special' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:City:nk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:City:nk]' value='false' />
+            <format attr='omit-on-special' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Latitude (generated)]' value='false' />
+            <format attr='break-on-special' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Latitude (generated)]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Latitude (generated)]' value='false' />
+            <format attr='omit-on-special' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Longitude (generated)]' value='false' />
+            <format attr='break-on-special' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Longitude (generated)]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Longitude (generated)]' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[__tableau_internal_object_id__].[cnt:fights_01C9A0DAAB1D47148B81EB62E8D082E7:qk]' />
+              <color column='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:Country:nk]' />
+              <lod column='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:State:nk]' />
+              <lod column='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:City:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.6114935874938965' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Latitude (generated)]</rows>
+        <cols>[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{8F2C08EE-D54E-43F7-887F-08BDE4F0510C}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Hoja 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[__tableau_internal_object_id__].[cnt:fights_01C9A0DAAB1D47148B81EB62E8D082E7:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:Country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rqlsrf0m2ciyj178ck1k057rvb6].[none:Country:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6A250784-37E5-4B95-BF52-2648AE37531C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Hoja 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAgAElEQVR4nO29WYxk55Um9t19iz2XqqxikcVdXERSErW0qM0jqSX3dE/PAN4Ao23Dhh8M
+      GAYMAwYM+80GBkY/GDYM2AMM7CePYaBhY8Yz7umWprulptQtiVpIkRQ3kVVksdbMWG9E3P36
+      Ier7848bNyIjMrOKlVnxAYXMiox748a9/zn/Wb5zjtJut3PTNHFUxHGMMAynXlMURfxUFAW2
+      bYvXFp0njmPYtg1VVQEAWZYhCAIAQJ7n0HUdlmUhjmNEUTR1Ttd1Z47RdR2GYSAMQ6RpCkVR
+      YFnW1PU6jnPgta0K+Ro+Cei6Dl3Xxfc0DAO6rn9i13MvQjdNE57nHflEvV4PiqKIRQvsL3xN
+      0+C6LrIsg6ZppQ8hyzKEYQjbtpFlGTzPE+fK8xyqqooH6XkeDMOAoihIkkS8z7IsuK4LRVEw
+      Go2gaRoURUG9Xofv+wAAVVWhKAp0XUeWZciyTFzrcdyH4nfKsgxpmh7reZdBnudI0xS6rqNW
+      q0HX9alns8YEx3JHsixDFEUzr1PTWpaFwWAA3/eRZZnYLfI8R5IkyLIMeZ4jCAKMRiPoui60
+      cRzHyPMctm2Lz/J9H+PxWCxeYLKwTdOEoihCmADANE3keS7OA0wWRxiG4v2GYSBN06nzHQfy
+      PIdhGDAM41jPuyw0TUMYhhiPx8e+u50WHMt+yMUMTB66bPIYhoFeryfeywUfRRHyPIemafB9
+      H9VqFZqmIUmSKQHIsgyj0WjKnMrzHFmWiYVVqVSmFhnPDUwEg7/LkBdnFEXHvvh5rUEQIMuy
+      u659uaNx51ujHEd+KtSmMye+rZGL2/94PBa7RRRFGI1GSJIEcRxD0zQAQJqmYtGapikEQwZN
+      K14DhQ6Y7BpEmqalZpeqqsKHCMMQcRyj1+tNHXtUcHfhNd5tJEkCz/NwHD7eacWxqCV5e+VC
+      9Dxv7sKlBo/jWAhIHMdikSZJIhaMoiioVCqo1WpT59c0DZqmQVXVhSYGP4PXoaqq+DcejzEe
+      j6d2L/n/x3FfqPk/CRMkCAKMx2PhL60xiyMLgKIoqFarwvnkQ6eTGcfx1M3P83xqwRGM/vD1
+      4s7BSA4A2LYNy7IQRZHYBeaBwsZr4GcWfQL6IUmSiB3oqIIgn+Og67wToO8jf9c1pnEsPoCq
+      qvA8T5gbdC5VVYXrunMfhCwYaZqKECUwWaBFze44DjRNg+M4ACBMp8FggFqtJo5lpIefNRwO
+      oaqqWOQHYTQaCbOqUqkc2n6nCaSqKmzbRq/Xu2sL0TAMcb+DIBCm5BrTOLagsLxY5IWtaRrG
+      4/GUbb3Mdlz2Hsa1gem8Q9FuZ5g0SZKZaBFwsD1Oc+k4zAZGoXh/hsPhHXG4i6Ai6vV6SNMU
+      YRiKHMlJg2wOU8keF441NMG4exFpmgq7m7Z70SwCMGWmMHqyLIpCMBwOj2zP53mO0WgkdqfD
+      nos+CBfl3dgF+HmGYZxI84dmaZZlInCSJAkGgwHCMDw2JaL4vp8fJgHERb2MlpSTTTRNoiiC
+      7/tTi18WAIZIXdeFZVkz58zzHN1uV/gKmqah0WiIczDCxGTZvEWgaZowjeaZOkycVSqVlXcF
+      RsnkTLbsk9wJMAjBXTDLMui6fqJMoCzLMBgMphQPdwBg8tyY4DsKVjqaEsn4NoClsqd8Px8G
+      BUJelGW/p2kqJL5arc51pnltzHwCExu4Xq8DmOwGFAKaIwyDWpYlchHzwONGo5Fw9pcFk3KW
+      ZU3dtzsJZsIVRYHjOMIPuZdBxcDf+/2+UEz8F8cxxuMx6vW6SIweFXqSJIiiqDRUJi8whtT4
+      IIfDIRRFgeu6Yjdg9IZRIPk8QRDMXfCLXivyV7IsQ5Ik4nU6erJ/AEzb757nIQxDsQi4c4Vh
+      KBxtOo1lxwP7oVnSOVYBnXXP8+B5Hvr9/krHrwrZPBgOh6hWq/e8AGRZhn6/L3ZsAFOLv9/v
+      CxOa76NC0nX90LkOfTweo91uC6kiKSzPcwyHQ7Ggx+MxAExpUgDCRrYsC0EQiNCk4ziC/EZN
+      RLt+UYhR0zSxzdH0kIlqSZKg3+/Dtm1UKhWkaYp+vy9+GoYhokQEtTdNgVqtJiIz/K7kIJXl
+      LcTNOgSfRlVV8d2pJLgL3WmoqopKpXJPE+Co2WnuFB1dKp00TVGtVpHnOQaDAa5du4ZarYY0
+      TQVxksescm91YF+r0iZ3XRfD4RCj0WjqQssW7WAwmNna0zQVfB3SFBi7T9MUo9GolDvE94xG
+      o6kQHr8gHSJgYuO7risWJLk8nucJhii1u+yrJEmCXq835S/IuQtZ+xRvZFGwlgF3SUZgyrLm
+      dwKmaU7dn3sRtBiYewEmCrXb7cK2bWHCyuYRMNnVNjc3oeu6SF6Ox2OxE3BXWAYz7xoOhzMR
+      mIOSQrJWkxdVmqbodrvCvGLSrPhQDMOAZVligRd3In6GqqpCiJhkI+WChK8oioRwMTdAv4Xn
+      K0ad+LumaVM06XnvOwz4EIs7zJ2AvPveyxgMBuIe8xlFUSTs+16vhyRJRAiZ1oNt29A0beZZ
+      yjyzer1eyhAo8rL0snCSnIWdt/iLmVX5/UXI2WBqdCbIqH1lTlCSJKjX66W2NolyMl1ajqpE
+      USQEhMQ6hs34WWXRHAoAqRXD4XDmuw8GA+FUrrq40jTF3t6eCAcfNxhiPQkLH4DwpaiwOp2O
+      WNS1Wk2Y1q1Wa0pxHWQ+MsjSbrdRqVRmghZZlqHT6UDX9YkyBqadjaOgSHOQ7X3a36ZpClta
+      5vtbliXMHJpjZY4zY/v823g8njIr4jgWUk6NIju3ZeFOhippzjGzLe8awL5plyTJyppcplcc
+      V1ye/gz/3YminjuFPM+FhqbvVq/XUa/Xp7hkNK35XJhDKpqSxftKX4EUfIJhb64bXT6AP+dp
+      9+IHFhcIUeTeyPY3C1XSNBWLlba/TKsOw1Bw9mVCGZ1s7lJhGE6RzuSbwR2gGFUIgmAmfCvn
+      CrgT8LsVFxUFpV6vL6XNGVDgvQFw5F2AGuykLPgiNE3DaDTC3t4ePM8T9rwM0zQFVV02r6vV
+      KrrdrqDcEGUmKzPvRXO40WhMlLGsqZdZ+EfBvBJBSmOZOSY7y7w+RguKhR6y/8HdwTTNmfMW
+      s8aKsl+7wN2JiTjaoEVwUbuuu1RYtMynOsriPekMzzRNxeKWo2MyqMT4O3+SObzs95d3a953
+      YYUAR3PsyoTFNE1UKhXhzJTtEkUsk9oufl7RtJFBaWfUiNA0DZVKZebcjFTxYYRhOHfxy5/v
+      +/5SkR05EHDUhStHuE4iqJz4/OatD/k7yveNpbOEZVki6lO2JuVqP5pQpMoIE+gwD0XechhG
+      pCalN+66rjB1yraoZVB2g8qc2LLjSAHgTsLtdhHiOBZOsPz5XHjFgpsoikrpGsVrOw6NzUjY
+      KrH9ebsNHcZ5HK47Ba6N8XgsgiFl4H0v5k9s20YUReIecJ2xUUKRPuE4jsgl0Afg5x8qQ1IM
+      P3GR0YsH9jUttal8LI9bBqtozDIhyfMcnueJ+oGDNCeTZvKWK38nZpXlneWg/AAfIh/kYe1/
+      VVVXzuqSESsLTRRFUFUVQRAImslxUQsOAk0Y5nrkz5Wf3yJznGFvCgR3lHq9jmq1KsiLckK1
+      3+8L00k2iVYWgOIWw/grzYVqtSq2G752HF0RFglBMcbPtDi5PnSul7WbLcuaokTLGlzWKGEY
+      Cof5oGsv+gnLCrVs6zL+vQq40MIwhOd5gpMlP8MgCGAYxl0jy43HYyRJMhOilHd6wzCEVs/z
+      fCZxKq8pmruyoqGiC4JAUMKB6ZA8UCIARYekaLfSaS6z2fmweLFFOvJxmgJl4A0kV0jTNNi2
+      LSIw87Qc+fL87vLNls0HZi2ZuOM5l9HItm2Lhbgsn4gJoKNEjBzHmerKIede+P3InK1Wq4f+
+      nGVBUyRJkrn8nTzPUa1WBa2FeQJ5Vwam1xGfXTHKpqrqjAKW1/eUAMgSWNbfh6C5I9v1/PDR
+      aCSYlrKQLGPKlNn6RQEqCmfZ+6idGVqjzZemaWkii1GoZaJfw+EQlUpFULWXhaLMNuM6CMcR
+      5qR2lCnpMjWEz/BuaH9GzmTTpOw9NKv5vIu1GLJfIK8ZORMcx7F4Pswv8VgZpSZQ2SIsK+6W
+      pYu2nQz5mGUe5LxoQFHyy66z7PxkrvLLM8tcq9WmfAHy5hlXlkN0/Bx5wfT7feFXLAt54S0b
+      BmXy8CigiRaG4dzeTaSe3GkkSTKT3JRRptiiKJphzzIhJu+kFBQ+szAMRY+pRYpt6u4WtWhx
+      QZaZMGU2/mFDfYfNPxQdVdYOm6Y5RbSi5pe1uKIoME1zJqkSBIGoESi7BwdFfsrA2POyPtFx
+      UCZkBcDnyWcrFxzd6SgQC1xk2rMM+RlSc7NVTVH7AxC7Kd+rKIpofel5HhzHwWAwOLDNzdwd
+      oPihMpeGHzgPZV/uoGPk98nvXVUoyDMimGmmEyjzjhZt+3LdAxcQzyNf7yoLh8JW7Gc6773H
+      ZZaoqop6vT5VI63r+l1hi9LHCIJAFLSwW6D8Ht5Lx3HgOI5g7Zb5mowscheXgyAUmqWDDAdd
+      fPF3Xqx842Qba55XPw9Fk2CeXb8simFOhv9kZ5U7BCFXksnXZZrmlOnAnUIOk64CPuAyU6SI
+      4+T18DxycdHdiPvn+YSPI7OLWRhUBEmKnucJQZ23UzI4QNOIznRZ6PoglGaC5chPcUEWy9Tm
+      afvieRmakl8zDENkjBfZ98tA13W0Wq3SOD+d9jRNRSVb8e9lUBRFVHEpiiLou9Vq9fAVSLeF
+      cRHkKNNx47Dm6aqgySOT2YByMiIXtExALGbw5ffyn0xzWXU3JvR5he1FTc4vVfZBB5lDdFAs
+      yxJalckz2oX8EodFtVpdymGUbX1+FxLvGHlgtIjXyN/ZvHdVB7gI7gLzvu+9xvNZtRUJoz1B
+      EIjnz5/M1soKhL7IKmFyRhwbjYZ47TBmsz7vw4pmyTwNLdv3xfeU9eMxTVN0Y2aZYvEzV7VL
+      l60AKr5HfjDsEyoLRbVaFQtd7vK8rE8zDyzHlJv+yvgk2qkvwqq+CDOzwGzoGphdF0UqxjK+
+      Yq/Xw+bm5kztyqpQ6djK/xZB/kKMLxft9+KFMAZOKY+iSHRqmPcFl7Xj5NreVSEnS8q4SvP6
+      Ch2HdmY3irLvepKJbsBsNFF+jSWvMpZtr8Pz+L4vagfk4qbDmEE6BYBSXnRmyyJCxS9Z9h5Z
+      u9KsYEb2oNYgB8X3ZRxHCn+eU5qmKXq9HkzTnHFKjyoEbBvJegbeEzazOskosnSLAlF8Xozf
+      y9npeSAF3jR0JBKXiCHrVRtmiaL4brcLx3Fm4uHyBS0T1Sk7jibGYephD5Lq44hhk1wFzG+H
+      UtxlVmkMtuhz2SmOBSL3mv1/GBR7s5b9TUYcx+h2u6jX6+IYhpx5b9gc2XVdjP0B3vzBv0Ce
+      A89+/V+HZh6eyKebpikKzVkrCUxIVMWGqqsKgIxVtPq848qOPY7FUuxhVPzMshLK4XAoanCP
+      CmZj5Z34JIPBgzKFNxqNSu8Z5zRQ0dRqNaGUmEBkUu/mpXdw6dWfAADOPvoU6ucuHv5aDcOA
+      53liC7p16xaA/ZK1YgF5kZstZxoPwjJCsCgZVpYzOErkiDiIn1MWACiObjoq6Cfd61gmAKAo
+      iqAdF+8dh3YUwXpxOdHqOI6I0JFZPBwO4Ta38OCnPw/kOaqbOzPrb5V1IVSfqqqo1WoiecFw
+      le/7M0IgO7z0IVa1vYgy/0L+nIPeGwSB0DiH2Q0YTluENE0RBIHgy5DRSbPuXm48dZzgPS9L
+      HMpgFlsWllqtNtV4QD4f+3zKux9JbaRzE1EUwXEcPPW135u8Ly/3GeaVWRYx9S1UVUWj0RA8
+      C7nx0CLmo9yeZBnMW/Sy5C6zmJkSj6IIm5ubhxIAaho66PNAXkme51NUBjb/Oul2+yIwQkY6
+      wzK0abm2ularwbIs2LYtqNDyc6/VajOJRTI7TdMUXfVoKuZ5jvSYytZnxJgfwoEWjuMszMod
+      h08gv7ZKMkQ+ZhG/fBEUZdK5LUmSuaYQNYnsKPP6WBRzUnvvHwQmMdM0xXg8ngrdLnpGpmmi
+      1WoBmHaKTdMsZQ0Xc0ByUQsryFgcs+y9lp/TPOVcGvSXtzDbtkVRySKKxHHhMKl6Lk5Wpq16
+      PfPsb+Y65gkr/3632h1+kiAnP01TtNvtuUqR4Bqiecz+PGUcJ9mn4v/7/b5QLp7niQjRokYF
+      ZWuz+Lfia6WGHM0CuXN0v98XVIayXMBRUXRwVwEFgFxz27ZFf/xlUZYlnvf9yjLWxZZ7pwVc
+      yEhjeIP3oCQjRI3HYRjNpc/Bxrdkn7L3rHx+2f5nQYvMFmCNebfbPfB6F71eNL/nejIswOZ0
+      jlarJYqoZS++bNGWXcRBwlIW8VkVsmMcRREqlcpCVmXxsxjRWta0k5N8zAucNlDrqjdfg33l
+      L4E8g+5/jMT9Q+h67cDnJO+inJMgDzEvo2T3+310u12hVEhpJ4eKIfpl8zDFyCExdwfgH0kE
+      I2fFdV10u90DM8M8vngRh7nIVcHPYeFFEAQLJ4lwsVNLHQZZlqHX66HZbJ6KOL6MJIkRty/D
+      ar8JJZ/cHzVsI40DALWlz0Mqtu/7GAwG2N7ehuM4pUqDbdBl+L6Pvb09NJtNUawk93iat27k
+      nZy79lRz3IMuXJ5rdVAjI/lD50FOdx9GkA76zGJUKYoi7O3tiZut6/pU9jjLMgyHw9LWLat8
+      LvuGsqflKtd+ryLLMkS967Df/xdQwzZyANAsJNWHkAcDBEMHpuMt1MSMmrHsFAB2dnZmCmKA
+      /XXV7XYxGAxEy0xeC5kKNG273e7KQZMilgpgszV1WZu6eSj7m6krsMdXoWQxIu8BhJlWeq7D
+      mEFFE6p4UxnrVxQFW1tb4vW9vb0DNf88gS8mAdmn3jTNud2tTwro8ObjLtSoBwVArqhI3DMw
+      eu/BaP8GafVBhA99E1Z9e2FNhWoY+KDXgTEc4GJzQwRYWB4aBIGgoLfbbSEwvu/DNE3xns3N
+      zannsKi4h/kpmmDy67LJvpQA0A6UxxIVP3ie5paTHV7vTdhXX57YkZufRnb2K4iT+bUAZYJQ
+      bGxU9sUP+i7yeZcRsqIAFO3I4rVzouFRuUKfJDiJR7NaSKoXoPtXkBkV6MPrULIJeVDpvotc
+      MzHOvwLda5XysoIwxCvXPsLrN69DVRR8/tyDeG77LIB9DhYjO6Sj875pmobd3V3keT5l6nAB
+      e56HdruNjY2Nqc+U77ssCGUBlqVTmJRKLkBZ+83bCWQhUFUVmv8xlGwiPLp/FRoyZLe1gbwY
+      ZS0us1Np8xU7s5V95iJwcQLLCVTx+y3atYhOpwPP805skow7QKZY8B/8PRjZGOrwKpwPvyfe
+      oyCHufc6jL03EG0+h9GD/xoy1UCaJHBcdxJASVNc8/tI8xxpnuOq38PDjRaSJEZValgA7EfS
+      mM8xTRPdbhfNZnPquvgzzycFNv1+H7XaxB/h4i+L+pSR9JYSAJmnwdZ8dIyXje5kWYa48Rh0
+      /wqULEHceAyZogG3D9c1Fdb4GpAliLwLSLLZ87Kpktwzpnhjypxv+b2MRjDRwkzjPBzGH6By
+      YBv2kygAcgw/hgqnvoNU1ZAZVWhRb+q9CnJYu69iHAO/6dURxxF2LjwEy6vCsm080thANwig
+      KQrOV+v4/gfvAgC++8gTUDF/J5YjcsXnCOwzdZkjoLYvg/w3WXkvJQDMC8i/M1ZbLCaRUdTs
+      sXce6tkvItdtRLXHkGb7u4MZt+Fe/lMoaQw8/AfI3PNTcwZ4Po7QKbINi8Iga4AyE8XzvKVy
+      DvOc6zLzr/iwTuLCJ8h3okY2TRNRZQtp9UFoe78uPeba9T34t5O8H136AI0nnsQZx8azm2dw
+      odaAqiiwNB1v7d4EMLs+iuC4LCbJim0oWVjFey4LAsHzF9cAzaKlTSD5pKqqikSZfDJ+qTJ7
+      y1AzeB/9BfT+JeSGh9SoI7a29heqaiIzKlDUCLluic8spt7Z27E4+ILvl69jnnPEiePsXF2G
+      gxz9ebsPr5ldnE8qNE0Txf+i+RQAJZlPHDSUfYV0PU/xk0vv4ZFGC9+8+Bhq+n4Lk79z8TEA
+      QBqG0BfcI8uycOvWLWHekBXK+xtFEc6dOwdgkjtYREyctxYORWPkg5YbLJlJH/rwKjKzhtA5
+      izCatqu1NJj4AHkKRH3ow4+h2Nv77TL0CoYP/wGUPEOsV4RpVPQjrKQP68qvkWsm0Po0gtyY
+      Ec6iOVRcrIwKyV3KVk3ezfubZVmoVCpi9tVJ3QXKhFdVVeT6/A5yD1m7CFrPIEhVdDUV8Pvo
+      hyHiNIWG/Xtf0w10Oh3cHAxw9uzZuUVAuq6LrhzArG8oJzk5NYavA4v9QZ7rSDxe2lXu4D04
+      H34PShYjhwKz9TRw7hsI41RcRKrZSCvnoPQvIzdcpN65whcCYvU2yUla/FNOsJLBufYy9N5v
+      J69lCeLt3xETY+TrWgbFgvyy7ViOOvBncXHwPqiqKh4WC2ZOC/is4uanYOy9jrI7rHib2L74
+      JJI0g5vESG9dx4VaAxr27zWThvV6HY1GA7u7u8iyDNVqdSZrL3foln8CmMm1aJqGZrOJTqcj
+      2r/LOZkyJElyeAGwLAv1eh3BoA3r2o9FdEdBDqP9JuzG44jMnX3TJVMxPP9NGJu3kOkVRFYL
+      eTrbNaL4ReWFpyCb2oKVZLbHz3GgaMLJdiS7LSuKIuacMUHD98odJlj8ftJ9AmASlck2H0PU
+      fxHmzZ9Dua2pcgC5UcX4wreQZrez6lGEl84+APP2sBT5Hsr1GxsbG2KSz97enhhizjoNzgpe
+      5t6pqirOx1oWYH9cLjC9ixx6QAYvyLIsJP0YajxtFyrIoYYdBFlTFH3vX2QVSqQAo26pGbEo
+      ImCaJoytz8HJf4ZcNTBuPScyhjxWPg+zj4edzSvvCvR7NE0TfoPMR5FvME2rKIrQ7XbFNMeT
+      nBjj97NtB8HD38Ko/gj0zltQ0xCps4Wg9QximNDyHM1mU7RB9Pt9MeoUgNgpZXueOQDP88QQ
+      Rblb96rKg/6XZVnY3d2dKuCR11yapkczgQBAsWvI7Ca00Q3xWgLglmnAddxSW5IL6qAvJWtg
+      RiRC5REk1QsAFESZCjUbo9vtigkh7KqW57kYYLe3twdgPie86DyXvcahGWyLSIEoMk6ZtZT/
+      L4/nOcmgcGd5jrxxEb6zI16f3Nv9xcVuHb1eIWR6WzFxwCAwoTRsbW0JrcydtdlsTplOnU5H
+      dBNclulbZJrKkbosy44uAJZbRfDQ7yJ7709gx2NECvATB+gnV/AV7enSMGQRsp1fFl6ULxxQ
+      kIANqlLBDWHJHTAJn21ubgr6Q71eRxAEpcmz4q5hqhn0uAclz5CrBpADoV4X4TZGoMgtKkab
+      qG1YTcfdhyNfTzrk4dbznqs8IWg4HAqNzHB5v9/H1tYWVFUVvZfY57PRaEBVVQwGA/T7fXEf
+      OezEcRxRprtICNiGp6yhATB51p7nHd0J1jQNWuMC/mbncVzrvYaxAgw04GltEqtXVAXDdIBR
+      6iNFCgUKbNVFTW9AhSoc2GUiLmU7hszuM01TJJ7SNBU1zp1OZ+71c3fRNA1O2odz5YfQRtdv
+      27cKclVHfuE7aAeTsUj1eh1aHkPdu4xgvAWr9cCUhuHWy0wqY9gHtek+CVAURSgcTlksy5Lz
+      /vf7fWxubsIwDHz44Yei44NsEo1GI2xvb085tVSaW1tb4pz8ORgM4HnexH6/7UuU7exkDSyi
+      qJumeQwm0G2NeL7yJN4av4MwC9A0NmCrLv5q7//D9fAKoixClqfIb2+RqqLBUAw0jA085DyK
+      i+7jsOHO7T1KFP+mqiq62R7eHbwBAHi88gyMSEcUxcKJopnS6XSEFuENFckQXYc3/AD21R9B
+      jbrTEY40gp6O0WjsoN1uT8ofu6/BvvZjpO4ZhNa/Ccuri8iD7I/I2+9JzgkUoSiKyKEUK/D4
+      fMbjsbD1x+OxMF04ron5GN/3Yds2KpWKqDobDAZoNptTPhjNTgCin+z58+dFf9k4jsWoWyqg
+      InW/DMfSziBNU1wevYcwm9i+vbiLX/R+PP/9eYI0T3A9vILr4RX8qv8TPFn5NJ6qPA8rd2Yy
+      wPMQKyFebn8P7XjSyuVGeBXf3vz7UJN9jZznuahP7fV6EyGwLOT+dejdy4CiInW24V7+l4Lv
+      PosckRrCq0yyx7nuIFcNKPEQyt5bGOefQpjkM9nlsrDdaQGp5dzhig6r67q4deuW2JF3dnbE
+      386cOYNOp4M4jnHu3DmxS49Go5kC+eICpra/cOGCaOJWrVbR7/dFBz/uuPOCLPLrRxYAbvV+
+      Mti/SKxWWBJmAV7r/wzvDX+Dr7a+jbPGhZnYvvx5qqoAioJh4qMXt8XfenEbo8xHXWtBURVh
+      i2uaNjUVRt19A86H3xesxlw1Fix+4OPR+/je6Af4dO1FPJY9g7j5BIzeb6H33ofz4b9CGA+h
+      P/jVQ/coPamQs/7F1xjokLlQfI2hTsuyRJSMoc96vY5bt26Je1k8lv6c/DcKI/0sVVXFQEAe
+      WwZVVY8mAHmeI4xCvNv7Da6HHx/lVACAUerje7f+KZ6rfx7PVb6ALJndCRRVwQfBO7gRfoyL
+      7hOoGnV0bwtB1ajD1SoI8xFeG7yCXtzGjv0gnqo8DzWfUCo0JLA//qFY/ABEAg+KBuTJlAk0
+      VnL8Kr2CRI1hqhaazSbSaDTR/siBPIE2uo70FMT5V4VsspZpW3L5mRnn+9M0Fe132OiWCzxN
+      U7RaLezt7UHXdTSbTWEucSrMzs7OVEMyWdBoJtVqNWEaUViK4Wpd148mAHEc4532G/jrvT8T
+      5s9RkSHDq72fAlDwQuWLM8UqcR7htf4r6MS7MFUbX259C28NXkUO4Knq87BUCz/Y+0tcHr8H
+      YGIW3Qyv4ovNb+DK6AOko6v4ajLbAyjRDPzac/GE30UlmwT0QgX4qQNcwQgadAZIOv0AACAA
+      SURBVJx3HpoM3EaOpPkk1LALqBri5qdgnsLmWMxlAPvsUEKeDV1cVOwa3mg0YJomarWayImw
+      co6Vec1mU/QFHQwGItdSqVQwHA6F2ZrnkznPnANWRNHENAwDjUYD3W4Xu7u7okmCLKxRFEHx
+      fT8va1V3ENI0xcfdj/D/Xvs/EWSLW2QcBgoUfG3jO7hoPTFd0aMqeGP4C1wLPsJnGl/CtnEO
+      iqKgm7Tx2+FbUBUVr/V/irRg0tT0BvpJF3YG/IddwCkorI6u4Z/UADtLcSEGtBz42AB2NSC/
+      rdg/XXsR3zj3XRiGgSgMkPi7gKLCqGzCKGkqfNLh+/7MDAdg347e3d0VsXzO9N3c3ASwP+OA
+      i5f5EbbXqdfrwlnd29vDlStXRP15vV6HrusYDodTtQCKooidY1kwK/zRRx+J3qNstHvoHSDP
+      cwxGA7y89707svgBIEeOn3VfxvaZc7Cx3wgpz3I8VX0e/aSLNwa/hFN3UTda+Mvdf45OvDf3
+      fINkkpAJVODnNvDSGMLUyQH82nMRKAMEGtCd46+GWSC2fNOyYZjnAayeqTwp4IhSOrUyMxcA
+      tra2xA7h+/7UDlFscyJPgRkOhxgOhzAMA6qqYnNzE6ZpYm9vD3Eci9kRRcU8GAygadqMAMjX
+      VAx70tfY2trCeDwW7VbI1TqUACRJgrd6r+F6cOUwhy+NUerjF90f46vN7wiNoqoqfj34Od4d
+      TkKfChT8nc3fR5IvpjsYqglDMTBMffzUAdq6gsfCHFBVGFufxy9Grxx4Pefth6bi1adx0cvw
+      PA+9Xg9pmk6NJAX2vz8XI2d8lYFZf/YEAibx/729PTEjrlarwbZtXL9+XSQTmcGnU8u4vlxu
+      GkURfN8X68N1XZGk5PPhvLJ+vy/CrWmaYnd3d3UByPMcfuDjjcEvRVz/TuKD0Tt4of4luJjU
+      hMaIcGn0nvi7o03yB1/f+C7e9l+HoRp4138DcV5ovwcN43SyW+UK8K6Z410TADI04/eQLohc
+      qVDxeOUZPFF/5tSFMw8ChUAepC3b/AxDWpZVmnTK81xEZ8j78TwPpmmi1+uJxcsdxjRN3Lp1
+      C67r4syZM7BtG4ZhYDAYCJoLe1UBmKlPH41GouKPuRjWszebTezu7qJWq8H3fWxtba0uAFmW
+      4droI3QXmBvHiQwZ3vJfxYvVr97mbujYsS8gRw5Pr8JULPhpHxvaGbzUOItUSWGpNt4c/GrK
+      MQ+y+YUci0ynut7CN7a+ix3vAlzHPfVaXwajNnI7QlmrApOBfwxZzkticgHKMAwD9XodvV5P
+      zIxjYrJarcJ1XSEonKzZbrdFRzl5bnWRPkMNL4PC4LouRqORqHRbuZVZkiS4NHx31cOOhI+D
+      D5Grt9PhGfBi/Sv49tYfIkpD/Kr/E/zGfxWKomCcj/BK92UoUPGtrb+Hs9b50vO1jE1U9QaU
+      Ulb7NJ6rfx4PNR6F557M2t7Dgpp7HomPFBTWZ88D6RNllVp0nPk7Of1MKPKzeX76IDK9Wmbj
+      yq8VBYOvszPdcDjEpUuXVtsB8jxHlES4EV5d5bAjw0/6GKZ9eEoNuZrh0vgd6IqBTWsb42yI
+      DXPCJLweXsFb/quwVBsPOA/hAedh7EY3hH9gKCY+U/8iHnOfQZCN8XF4Ca90Xp5r/tT0Bh70
+      Hr5v+v8XwcW9qO29bPbME4RioYvM7SE7lOC0Is4YJr2Bn1VGmJRNMvm1Yn6CoVTXdUWPoZWf
+      7DgeYZT6qx52JCR5DD8doGo0cCW8jJf3vgddNfHVjW/j+doXYeQmkiTBlnEWDzmPwtIcvN7/
+      BT4YvYsck4dnKCa+3PomHjQfBTKgotTwhPssbobXcHn0HjJMP2RLtfF8/Qtouhv3leYn5IU5
+      TwHIndsOOpcMFquQH1T8O/lCMquW5ku/359Z1PJnFHlJssnG2hTWlgArUiHyPEeQjmdi7HcD
+      o8QHTGCUDSdJqmyMv9r9U3yx+XU8aj0FALBzF19tfRc34o/xF7f+uVj8wESIFCiAmuNN/5fo
+      JV1ccB7GGes8OvGe8GlUaHjU+xQeqzyFi/XHYBonn8J8WOi6jlarhXp9nw7OgXWcjyYvPC4+
+      1kBwyEUQBLAsS5QocuEDs8IhR4v4WXwPTSaaZnK7RZmq3m63hanEXWM4HApipGzare4EI51a
+      WHcLSZ6gk+zil92/FVyjJI/x4ei3eMx+GsAkSfZxeAlv+a/NhEVz5GjHt3B5/B4+GL0DAHhv
+      +CYUKFAVDQoU5Mixbe3g69vfQcWtnujObscBsln3C14gQp00Lzi8gou9SImIokg4pHIkaFFt
+      BCNLRdOLRUjcdXRdFy3UOeyx1+tBURSxszBsqus6XHcSMWRUqVqtriYAiqJAmbQyWuWwY4Gq
+      qAiy0VRkR1cMPFZ5WtzgBDF+0f0xukm79ByXRu9OkfaAiWBsmWfxdPUFBNkYj1aeRMWt3nfh
+      zkWgZuU4KnJySDnn/S/Ljch2OanTBymVotMro1jhJTc7VhRFUKtlB5kmD/0VHh/H8eo7gK05
+      0BQNSX53CzxczUNFq8HSbIzTfS7PKPEBPUee5dAVA+edi9BDAwpU3IquTZ2jn8wOVzAVC8/X
+      P4/Hm08vFdW4H8FSRdb5AhD8nSJjkz8Z0ozjWJgzhxkAvsyzkIWClX8UAppg/D/DoVEUTSgX
+      q15QxajC0yrHRn5bBrpioKY3cSW4hCDdj+cneYxfD36OlrmFLf0s8gz4bPXLyGopftb94YwA
+      FPGE9ww+0/wdbHrbp6pg5TiR57mgJsh0A5LjitMgiwLBegza83cCcsF7u90WO8JgMBCUimIn
+      aQrHSnkASs+WdfaYv8Ji1PQGKnoNnejWTPZ5lPr4/q1/ht+MJ7mAPM2h5waqemPhOTfNM3hp
+      61s413gAlrle/GVgWSNLH+XwYqVSEbsB4+5lPpNpmsLp7Ha7uHXrlvAVyijU9DfmtdtchMFg
+      gG63C03T0Ol0MB6PBSO1+BmMKK0skrqu40HnUbztv77qoYfGOfsC1FxF3WiV/j1HBlO1oGgK
+      etkextEI552H4Kd93Ag+xigbIsliaIqOil5DRa/h6erzcEznvuD0HAZZlgn6MrDfmS/Pc0FR
+      Bg7mRDmOg263C1VVRScILlJWcMlg20pgP+pDmvVBz4nn931fUCba7TYcxxG5CJ7D8zw4jrO6
+      AGiahgvew6i0a/DT/qqHHwqPuJ+atLzTXBGtkZEjx5XxJfTiDt4dvok4i+DpFTxVfQFPVV7A
+      n978E9SNFh50HsFb/mvoxnvYi25CVVQ8sfHMfZvoWoSk0Lqcu3+320WlUlm6wwWzr6PRCK7r
+      iuNIj6ZvwIUpfyZH9Q4GAzHUhO+XC2TYRp3RINu2MRqNcObMGdFDtNPpoFqtCgYqd5eVn7yi
+      KPDsCp6vfwE/an9/1cNXxoPOI2hqm8iUFG/0f1FKwEvzVBTAEIOkhzf7v8SjO0/ic40vw9Oq
+      eMf/tfBdRqmPd/w38Uj9ybUAlKA4VYUa/KAQZhls28a1a9dmBmzneS5o1OxAXeyewZ5K81rY
+      s0M0I1Jnz54VeQi5IQHJdxzMR4E71FhDwzDwRO1ZbJpnDnP40jBVC59rvATf9+HHA/RKojiL
+      UNVr8MwKPrv1JZx3HoSfTodAu/EekrS8ePp+BxNMHEhHs6fRWOxblUGeK1EGRmr6/f6MACxr
+      ntIH6fV6GI1GM9fJYhp2ixgOh2i324cTAEVRUHNr+Orm70JT7oz2VKDgc/WXUEVjQomFiZax
+      OZfA9nztCzhrPSD+ryk6HvaehG1OuOG/Hb6FdnRr6phOtIdb4xtrAbgNOqAch8tB1bVaDfV6
+      fcZeXxZH8bGKfJ5FOHPmDOr1uqgoK4PruqjVaqKL96FXr67rOF99EF+LvoO/3vuzAwtSVoEC
+      Bc9UP4sn3GeRxLeJbDDxUvPb+DD4LXpJB+8P30aG9DZX/1l8cfNr6EUdvNZ9BcPUxwXnYTzT
+      egGmMdlWB0m/1HcYJoNTO+N3Vfi+LwbWsdhEbix7FNxpJcNa4jAMFzYhkxmjRy6KN00TTzWf
+      AwD89d6fH0tyTIGCp6sv4DO1L4nFryiA3x+ga7RxOXgPO/YF/OHOvws/7aGmN7DlnYVru3Ad
+      DxvuNtIshambwrnSNA0Puo/g7cFrGEt1ATky/KTzA2xY2zjbOHdfR4OSJJkaPsJF0ul00Gg0
+      juwn3el7S6anqqordeE7cmtE27bxzMYLcDUPP9r7/lwawjIwFBNfaH4NjzlPi8Wvqipef/VX
+      +Jsf/gDmBQPKi5PuYS9uvISH3IenYs+apsHRZrdpVVXxYP1h/C7+Ad4fvo03B78UhL5e3MHN
+      4Bq2s7P3Lf2BmV52ZZMb0jabTVGNdZjmCTzPYYeQLwt5dJZhGEsLwbG0RrQsC4+2nkTL2sIb
+      vV/i9cHPEWXhwQffhqZoeMT9FD5d/Rw81BBH8VTGrt/tYjQcojraweOVJ/BA7SF4VmVpspqi
+      KDANEw+3HkPNbODD0fvo3RZUQzXhaPdXsUsRDDcCk3sld2IAJj12rl27hk6ng52dnZUVBTPG
+      NDXvxL1m9wfLssRcsWVw6LYoZWAfmUHQx296r+Kj8Qfoxm2Ms9k+PKZqoarXcd5+CE9Un8WW
+      c0YUQgDTCZY4inD5/fdx9tw5NFot1Gq1uWN1Drq+OI7xdvt1/Kr3UyRZjCcqz+KFzS/Ate+v
+      ckciyzL0+32ReR0MBmImF0EBsW1b1AfLjamWATPB7OS9CjqdzoxQlsEwDFSrVbGjcU7Dwoq1
+      4xQAgsy/OI7Rj7oYRH2MUh9JFkNRVHhaFRWjgqpZh6GZohwOmKSzfd+fyTDSSc2yDJubm4e2
+      SbMsQxRHGIXDSV2xVYFlzg54vh8gLxRgcu/lMU/y+ygYeT6ZrxbHsSDDLYsoikRmtlKpoNfr
+      iYbCiwRqWQHI81woR2DSoJe5i3nXeUdimKwmYh/9M9iZSqyURVx4gdVqFWmaCp4JLz4MAnTa
+      e9B1A7ZloVZgIh6EPM/Fg47jGGo2IXPlWfkE8fsBrPvl7+TIFKEoypSJ5HkekiRBt9sVheuL
+      kGWZGFd05swkd0TePnt9djoduG75QJUkSRbOciboxDNTTUFY9HzvaApU/tBl7UYKD50yVVVx
+      8/p1/NX3/hy7t25CVVU8/Ohj+M7v/wG2trdL+eesRgIgmuMCEJ3IeJPZv1+++fdTOLTT6Ygu
+      CwCmuj8UUXx+uq6j0WhgMBggDMOZLC8RhiFGo9GMoDQaDTE9hibVaDQqfS/t+0UgX4iKs9Vq
+      ieKbRW3370kOwFTRc5bhh//q+7j28X4TrrfffAPNVgvf/r2/O7N1pmmKdrstmidtbGzMHVIn
+      8/9938d4PIbrusK/OO3CQHOHu3OZ9pffW4SiKKLHznA4hGVZU9RkllE2Go3Sxec4jjCtuLM4
+      joPhcCgEgVGdeQK26FoVRRHkuHmdou9JAZCbmA6HQ+ztTmdw8zzH1Sv7vR5lBEEgtL885Hke
+      GMWS/09nmcO0DcM4lNN9r6PRaMD3/SNPr6lUKgjDEJ1OBxsbGyKLbFnWwuxxmZIhbSLLMgyH
+      QwwGg0PRLwiyQOnfFHHPCkCr1UK/30d6myQVFOZ7ObcdNfaIoenDuWCrOGks2uANYiaUxdVy
+      qR1xGoRhFR9qUWsUYH9AOLu6VSqVqd2g7HMW5QZkQVi0M8271jiOxe7OXkBlJt49KQC86Far
+      hSAI8PxnX8TfvPxDJLc1VaVaw3MvfHaquj9NU0RRJMZicjtdVgDobwD7xKpz586Jpk5TZtkp
+      cpplavCi77RMIkvm3LOdySIsY2Ye5j7neY5bt26hUqkI88p1XXQ6HQRBMNXU654UAIK9YF76
+      +tfRaLXw/rvvwLQsfOrpZ7B19qzgrHMHCIJAtOyQtfVBKIZU5YhUGU7L4s+yDO12G6PRCNVq
+      FaZpli5aBiaKo6vK7kOSJMIsPUiwmL09bnAGmVzFxmcszwweDod3Jg9wJ1DsO8O+MKqqIggC
+      7O7uYjQaiRs6HA6npg8C+42cTrtzuyzYphyYLEZqR7knKEEnVfaXZIoDn08YhqjX61Plk2VC
+      0+l0UK/Xp55FUfj29vZgWZZIbsnHy8fI/wCg3++LZFuz2RQ7eBiGIvcgdqqj3cK7B/lGqqo6
+      1WHAcRwxSkdVVTEwTe4gzH7wFy9eXAvAbchmjWmaIisshxDLwPm//N1xHDGwTp7CKWtggvde
+      rg/g++U6YFKx2Se0DDy/7J+wUqzdbou10Gg0sLGxId4jN9Y9MQJwEGjzc4BaFEViqnuSJGIi
+      yf1KeCvDeDzG7u6uaF3CCY3FhckFzHrgIAiwfTsHwxpeOqpy63LmYAzDEJE1JtXY/a2M788M
+      tdwcq+iDzQP9P3lcLRt3bW5uih2OpZqnRgBIe/Y8T2iNIAjQ7XanHLNV7PdlnMOTDGpQ27ZF
+      z02WGLLuVjaP4zgWHZwpJOzZ3+l0YJqTHq10PMnFYfMsx3GQpilM08Tu7i6A+bkHdpqjwlq0
+      6Nn5jVFADszjc2Nu4fLlyzhz5owIa5+qHaAIbscbGxvodrtC6g8CF0Ucx9jb28PGxsbCth8n
+      GZubm3BdF+12G0EQiEFyHDARhqGYtsIuEbwf1MzMrI/H46mgBDDdFbrYBqVWq4nEYxk4Df6g
+      ZlpMmjWbTVF4Xxa1S9NU+IDyOU+tAAD70QvWiiZJgmq1OncRU1uNRiP0ej24riuaQjHryYZQ
+      dL7lkN9JK67XdR3VahXj8VjQREhM4z1iSxMuIN5Lfmc6lVtbW1BVFYPBQNj9si8gg/eKk+HL
+      3kPCXbVaFYJl2/aU4DGESw2fJImI/hV9D03TxHQYhs2TJDndAgDsF0OTX0StTsjRCo7wpN/g
+      OI5o0gRAmFMUAGZQLcsS/sVJ2yEURcH29jbG4zGuXbsmvhPHHvX7fTSbTdFevNvtIggCtFot
+      ERrlP4ahy5xfGaPRSAzIZscGYH+X6PV6IvLT6/WmIkx8FtyF2O//6tWr2NramgrVyp/vuq7o
+      HBeG4X549E7e3HsFuq6LrPD169dFsyX2jKHjRAIeMN23hiiLOgAQfTMBnMhp8YqiiO7KbGQV
+      BAFs20YYhsKkoGMpmxAcb8RCeo5JBaajQHJcPggCNJtNRFE0RXpj2JOT5IfDoRBA+iJxHIvM
+      PVE2UbIMjuPA9320223RP+i+EACiUqlgZ2dHOGj1eh22bePy5csYjUZTJky1WkUQBEt3QgiC
+      AHt7e9jZ2Tm2QvK7Cc4CoMaN4xhJkpRGzZIkEQtQ3gnn+Viy/e/7vvA1yMTl7ivnGUjNNk1T
+      zCouhr8J/l2+1rJ8ATBZA6JwazC4vwSA/BLajQQdKDnqo+v61JzcSqUiHoJsr1Kz+b4P27Yx
+      HA6hqmrp5JN7HY7jII5jofW73S5ardZURIXfncrCMAyhPEg+LNIm8jyf8LpuO8js008bf1Fw
+      gX39u90uGo1GqZBRWdEJlj9X/klwxwvD8ORkgu8ksizDjRs3pvhAMphcYVlgWbPVXq8nWIuy
+      SUE++kkSiCiKRLx/NBqJRBewXx3GYIJhGKJ9Ciew93o9UWgDTKgJ8nAM7sBFJu480CfjFPni
+      M6IS6na7UwM0FqHf75+uPMBRsWhxMm7MmlZgWqvQL7h586aYSM5GraR0s2ETheJehmma2NjY
+      wGCw3zOJIUQmt2hDM8omf6dGo4F2uz0V5SmaLtxhCQoWsB8+HY/HwsHmpBcuXAqPvDM5jiMo
+      2XIolNdAIQL2aTHrHQD77MEyyq+8jZJOwYiS7/tiQdBh5Bxax3FERMT3fVSrVYRhiGazuXIt
+      7ScJuVdQEYyvMwlZ/BsVQ5qmIgwtg3wgOtCM4cuLtBjTZ+Mu9v/M80k/IEamyApmhIimVhiG
+      Yhq9XDBz3+8ADK/xQRZT77KmZyaUozuDIBARC0aUyGAdDofCb5CHxTGKcVIEoMzppBM57lxH
+      uPtbaN4mnK2H4bje1OKS/zmOMzPhsVKp4MaNG4J7xH+Lqr9k9iiPpZ/g+z5arRZs254als1n
+      Uix8WnlG2GkDE1/FB8O/EdQo3Ka59TKZwiQSMBESxsyp+bl7eJ4nWoyc1Ik0E4URwH/1/4b+
+      0/8JbjJEDgXji99G+rX/EtXWmRn2p6ZpIrkoh5G54E3TxHg8PlS/IZniUmy8QGEk7VqeEUb6
+      930tAFEU4ebNm2KSyDy+ie/7SNMUrVYLnU4H3W4XeZ6jXq9PaUjP8zAcDqFpmoiHl2n6IAgE
+      975IFz4JGF9/F/rP/mdoyYQRqiCHeenPEW08jvhL/1FpkIAJKmZq+/2+oE3neb5yErHYkSII
+      AkRRNEO5KMI0TbFrA6eMCrEKeS3LMgwGA6EZ+v0+wjCEaZozVF3DMATdWk70FCE/4EUIwxCD
+      vatQupegbTwKu759YijaSZIguvYa3Hi61bwCIPvwx4g/9++VCoBt26jX6+I1ufpO5g8tAy7y
+      arUKXdfheR6uX7+O8+fPl1au8dy2bc9QYU7GXb8DoFnDUF6tVhM3h3wWYH8LlyMWR4WSp8h/
+      8b8h/7P/Askr/xjByC91wOk3jEYjod0+aSiKAtUsF3LFrMwNI8/r68MgwSomIcPSbOtCSrcc
+      ei1eMwt6ioJ2qnaAVbWIXIDBdH69XkcURfB9/851gshzKMkYSGMgHmM0GsIfBYKzRP9idOsS
+      8lf+EdD5AMnFbyD5zB/B8eaT+e4GNE2DeeFFxI3HoXffFdMaMs2C8tTfL3WaOcaIuRQO25Dn
+      hi07QpVZ6nq9jiRJsLGxAcMwMBwO0el0BB2aETjuymycW8SpEoBVoOu6iC2zhpQUBsuypiYZ
+      DodDtFrlA/oOgyRXoD73H0B74MtIW08gyQAgQ6/X228TmcXIf/THUD58GQCQ776FxK4jeeHf
+      PtS83eOCoijwWmcx+OZ/h/iVf4R87z0odgP5M/8WvEe/WhouJSFxb28PN27cELY/sM8MXQVM
+      ogGYomGzDoR+GPMJHIhRhvtSABjN4WwpmZFIkHo7GAwQRdGx2uh5niNUK1C3X5yYPlkOVVWm
+      QndWPoa2+7Y4RkGO/NovET31h8jSBIZpfWIOtKZpqJ3/FMKNf4g48KEZFizHW7iQuSA5qI6V
+      YXL2fRkTjxqdPC2SGeWQa6VSERSWVqu1sHXjfSkAwMSOHI/HQkMUQc3CUZ7HvdBkym7Zg880
+      B9rG48Bo0hQsB5A3H0Hy0/8FaZYi+ey/D7e5c6zXtCzoF7meB6yQRCW3/+2334Zt2/A8TzTc
+      XQXMTst9h4rnqFariKJoaiBeGe5LASAhq9Vqld48ZjhXbeO96jXIP4tIcgXaF/9zqIYHdC8h
+      v/h1YOMJKH/x3wB5huzc55DVz5y4GmfHcbC9vS1oEt1uV2SAl4Vt21NNruYlFhcN5iPuSwEA
+      IMKV7FosCwEpD3cKxYdV9vDyPEdgNKG/9F+LJI8W9aFf/AaQp1C3njgxoVMZlmVhY2NDdJVg
+      5+harSYm08sFRmWg+URfbR6SJDkw635fc4FYIcTsLVHWs+Y4cVjbXVEUGEoGx3VhOstPyLnX
+      EAQB2u39UVpslZ6mqTCTyDCdB1JYWNwElHe5Y5RoHu7bHQDYb/bU708m3lMIKpWK4PLcSwss
+      z3Mopg3bmyyMe+naVgHbTZIcJy90+hfzGvbmeS46ULAGmaxU2ZzlvTmop+l9LQAABMVXvuHs
+      jEAGY6vVErsBmYt0jlfFUSI3JHXxPCcVxXtQ9l3m9fRn2JQmbJZlYs5A2bAO0k7mFtwc6Zuc
+      AtAh7vf7U+0+2Dd/NBqJKi+SqlzXXSozXGSUHmXxq6oqGled5MUPHNwUl38nv4dzAsoCB6zy
+      YyJTTiSy0928SB+wFgAAEA6X3M6DW3GlUhGtFTnogRTnu0lrLvblPO1wXVdEipjYYuNdPgNZ
+      iPh339+nlbBJ8joPsARc1xVDFGSKBMsbx9J8AgoGe+LQVyiL7iyKcZfVHJTBcZxDmVv3KuRW
+      M4tAugoLXUhfj6IIURSJemV2sNjY2Fh5t10LAPbnETD5VexYXOw1QwJdo9GYGgAnN4ld9CAU
+      RYER96DdfBXQLKTbzyNSyrU7CzdOYsizDNToclv7svewWRcZpAyJspGXjCiKUKlUMB6PhXMs
+      3/9FCmYtALfBZq20GQnZJAJmtTVt8yzLxEPjcWVQFAVm3IP2o38IXP8VoKjQH/0Oss//Z7c5
+      QbPvP21YdiRT2bwCPifmDICJCdvr9WDbtsgpyFi025wOtXJMsG0bjUZjJivJmgBZCIoPZplJ
+      hgCgI4H20/8RytWfQcliKGkIXP4raONbc485LdqfIN+Jzm7ZP5nbQ/B3zhsGJiHUSqUCz/Om
+      uFQyyuqVWWB/uu7sMcA0TTSbTdHmA4BgjS7klOg6dF1Hu92e2aJlaMEecO3n0y8aLqDNN4FO
+      G+RuEfMgF9zLQkH7f3t7G6Zpwvd90cEvCIKpQAGbaxVf830fe3t7k35Gd+xbnmDQJzBNE4PB
+      ADdv3pzqaTOv7I5F8HIfnCIyswa1fhHYfRM5FKB2Hvlzf4TEakC9fUp5yz5pDXcPQq/Xm2qg
+      S3CX5X02TRM3b94UZhBDnfyd4Wv2ZOLuDUyen+M4UyNvZcgtME/X3T1GyNRaDt4r/q3MtuTs
+      Xbb5KCLRXKhf+a+g/up/Bz76a+TP/DtILn4LWjyEduXHAHKk57+MSJ1EfU6bANRqNcRxXGqq
+      cLgGczJc4ABEw9wiM1dWSNwlGo3GwqiZpmni2Z2uu3sHoGkazp49i2vXrs2N+6dpKpo48f/z
+      ZttmWYbYOwfz7PNQPvoRgNtdil//P4A3/wRADv2pfwPZC/8xkiy/I0PkPklQc8vDqwku2iRJ
+      xP3jPe92u3OTgNxpVVVFo9E4MF8in2MtAEug2Oum+ODY4YDht5s3by6MAuV5juSx34d27gvI
+      vTNQkAN770LJJk50vvc2VBUwdfPU7QA0TxhyXub9wGTn6Pf7omGuDJ7HuKMdeQAAB3tJREFU
+      cZyVFcbaCV4CaZqKOHPR/mdLD1lI2Px1EW4XBEJ9+/+B9vo/AeoX9h3h4Q2o138Jxz6dmV92
+      eV7FwWe4WW5iDEx3qmZ2fhHCMJyisZwu9XIHwS7ILJhndCKKohl7U1VVUW0mdyIQoT0Aeudd
+      qD/8b6H0P7p9kA5kt8ODg6tQf/zHSOrnkJ9/9lRGglzXRZIkU6FjRmjm1QGwR+nVq1dFlC4I
+      AkFRIa193vFMsE2d8/i+0ulEMaPb6/XQarVQqUz4+Bz0IDt1nufBdV3RTqUY01aVDOrb/3R/
+      8QNAloD7AgBg3Ea+++5SlIGTCO4A8yq5ysBk48bGhmh/WGw2vGp55VoAlgBvqm3bonMEGzKp
+      qop6vY7hcIjBYDA1wse2bQwGA4xGo+nyvSwB+lcWf6jhQqmdO5Xan1jFv2H5JBvcGoYBz/OW
+      MnsIUlhkrAVgCbDXpzzVUL7ppNuSUMdyP0VRsLGxIch1Qji67wP+9dkPMlzkVg25tw08/0cw
+      dp49dVlgGWXtEOU5YLK/1W634TjOzBQY2fcibXoR5BFWmqatfYBlwNS5PNi5LBqkaRrq9brY
+      CRhv7vf7ojGTrqlQf/6/QhnemJxbUQGogLcFfP4/gdJ6BIrhwGhegGkdfzeKewllJZ2sA7Bt
+      W5RK5nkuBqHLoFLa2NgQ/T4Pul+apqHVaommxmsBWALsNc/26MA0lblog8pc9TAMRRcDTdOg
+      Da8Bt97cP/mFl4CLX4d65tMwtx6DfnuLPkrxzElB2eByRVFEQowjTeV7Id93zhGWn8tBoBlE
+      U2gtAAeAzZs43E12SoVTKzV24iwAeb6wbHvmdhOwG8BoF7mqI3/0d+E8/XfFYjjti16GTHoj
+      dF0XDYuLi7rIyDVNE3EcLzUhch7WArAA7DwwHo/FAi2aPbJmIp9lc3MTiqKI6iTSc/M8R6o5
+      UL79x1A/+Aug9SisJ79z53qQ3uPgbIDr16+j1WoJ5VJ0VOV7TsYna7IPk/ySsRaABaDzGwRB
+      advzeXRdRVHETiCH9IykD+3S3yLffgbal/7TEztc+zjhOA62trbEDIZF2jyKoqlpPpx0f5RA
+      wekNMRwTZFruQaBAhGGImzdvThG3VFWF/sb/BfXH/z3Uv/0foCSj+37xAxOTp9FowHXdhYuZ
+      u7Gu61OD+47atnItAAegjLUIzM7AkhGGoZiyOBwO91ux1x5A7m4CjYegaHeu89xJA9unHwTO
+      MWabmuPo27Q2gRaATu08G7Ns8bN/PWdQBUGAfr+PSqWC9LHfg/ng70CtbMJy5w+Cux+xTKsZ
+      TdNEIvK46qTXAnAAOBK1SLEtC9+JIgspvOc4juAGtVrnYRib91205yCscj+YdDyuFjFrATgA
+      i2jNZX8L4hwRLEBRAClcxyqzNcqhKJM+TItMTjq9x9m4eC0Ac0DzBzi4vySRZMA//pev48Mb
+      ffzRt57Gcw+3BF36TrZaPw0wDEPUCWiaNkNyY8j0uHfOtQDMATON8+i1ZdVhcZrhVneE3jBE
+      xw/FrCp5mMMa5SCXhybj3TIR7+v26IvA1htxHCNJkhkeColYxTzApZsD3OyM8OKnzmGjUTvV
+      ZLbTgLVaKgFb8AHAYDCYmm8rv6fstYe2Kri4XYWmnr5+PqcR6ydUAs7nlZvkznvfPEFYO7wn
+      A2sBKIHcamORLcr3FAXBNM1T183htGJtApWA9j07ji1CnucwTROWZU01dlrH+U8G1gIwByyy
+      PkiTs1jjTg7VW+POYW0ClYDTRdI0PXAHWGv7k431DlACZiPJOiyDbdvQdX1S5riO8Z9YrJ9c
+      CdI0FTW88xxhTdOEEKxxcrE2gUqwzJid8Xi8sA36GicDawFYgHlxfmAylWSdQT/5WAtAASSv
+      AZMdoIydyP6f60zvycf6CRaQZRmiKEKSJAiCoNTM4TSYNU4+1k+xAFZ0sRKsmAfwPG+q4e0a
+      JxvrHUACSXByx2I5DyD3A13jdGD9JEsg95uUkSQJwjBcuQPxGvcu1gIgQVEUUXXEjnBFbc8h
+      b2ucDqwFQIJMg86ybC6ludi5bI2Ti7UAFBBFkWjCVNYJol6vr6nOpwhrAShBmqailleGYRgz
+      xdprnGysBaAA9vApannOrV1HgE4X1k+zANd1xWgjOQlWrVbXZY6nEOtEmASaNhyjw0mPQPk0
+      ExksjyR7dF0ncDKwFgAJLIVk+DMMQwAQfX0WNWZKkkSM/eQQtzXufaz7AhWQpinG4zF83wew
+      T4iL4xg7OztzSx+LQ/PWOBlY7wAFsA0KO0OYpok8zzEcDheWR64X/cnE2gkuoDhETVVVMcKI
+      vf7XOD1YC0AB3AEqlQp0XUeSJBiPx8jzHEEQYDAYIE3Tuy4IZKmucbxYC0AJuAtw9iz/DQYD
+      7O7uijnAd1MI5KHQaxwf1j7AHFAI6vU6kiQRESBd10U2+G7b/cvOwl1jeawFYAG4yE3ThGma
+      Yk7AWhOfHqwFYAWsF/7pw/qJrnFfYy0Aa9zXWAvAGvc11gKwxn2NtQCscV9jLQBr3NdYC8Aa
+      9zXWArDGfQ09iqJP+hrWWOMTw/8P4muyuRj8Pa4AAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
