@@ -78,7 +78,9 @@ def set_nan_columns(data):
 
     data.rename(columns={'B_avg_CTRL_time(seconds)':'B_avg_CTRL_time', 'R_avg_CTRL_time(seconds)':'R_avg_CTRL_time',
                          'B_total_time_fought(seconds)':'B_total_time_fought',
-                         'R_total_time_fought(seconds)':'R_total_time_fought'}, inplace=True)
+                         'R_total_time_fought(seconds)':'R_total_time_fought', 'B_win_by_KO/TKO':'B_win_by_KO',
+                         'R_win_by_KO/TKO':'R_win_by_KO'},
+                         inplace=True)
 
     data.insert(0, 'fight_id', [i for i in range(len(data))])
 

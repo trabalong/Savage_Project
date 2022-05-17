@@ -128,13 +128,11 @@ def clean_fighters(fighter,ufc_fighters):
 
     x.reset_index(drop=True, inplace=True)
 
-    #x[['Height_cm', 'Weight_kg', 'Reach_cm']] = x[['Height_cm', 'Weight_kg', 'Reach_cm']].fillna(0)
-    x.Height_cm = x.Height_cm.fillna(x.Height_cm.mean())
-    x.Weight_kg = x.Weight_kg.fillna(x.Weight_kg.mean())
-    x.Reach_cm = x.Reach_cm.fillna(x.Reach_cm.mean())
+    x.Height_cm = x.Height_cm.fillna(x.Height_cm.median())
+    x.Weight_kg = x.Weight_kg.fillna(x.Weight_kg.median())
+    x.Reach_cm = x.Reach_cm.fillna(x.Reach_cm.median())
+    x.Stance = x.Stance.fillna('Unknown')
 
-    #x['Stance'] = x['Stance'].fillna('Unknown')
-    x.Stance = x.Stance.fillna(x.Stance.mode())
 
     x['DOB'] = x['DOB'].fillna(0)
 
