@@ -25,7 +25,7 @@ def fix_columns(data):
     #col_posiblementeborrar = [Height|Weight|Reach|_age|_Stance|win_by|wins|losses|draw|total_time|total_rounds|
     #                           total_title|TD_att|TD_landed|]
     col1 = data.columns[
-        data.columns.str.contains('avg_opp|GROUND|Referee')]
+        data.columns.str.contains('avg_opp|GROUND|Referee|B_draw|R_draw')]
 
     col2 = data.columns[data.columns.str.contains('SIG_STR_att|SIG_STR_landed')]
 
@@ -58,6 +58,8 @@ def fix_columns(data):
     data.drop(col_todrop, axis=1, inplace=True)
 
     data.date = pd.to_datetime(data.date)
+
+
 
 # Valores numéricos por su mediana y valores categóricos por su mode
 def set_nan_columns(data):
