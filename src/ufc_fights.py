@@ -59,8 +59,6 @@ def fix_columns(data):
 
     data.date = pd.to_datetime(data.date)
 
-
-
 # Valores numéricos por su mediana y valores categóricos por su mode
 def set_nan_columns(data):
     
