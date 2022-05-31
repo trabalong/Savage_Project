@@ -9,9 +9,9 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 ## Data
 
 - `data.csv`
-- 'raw_fighter_details.csv'
-- 'ufc_fighters_official.csv'
-- 'ufc_fighters_styles.csv'
+- `raw_fighter_details.csv`
+- `ufc_fighters_official.csv`
+- `ufc_fighters_styles.csv`
 
 ## Functions
 
