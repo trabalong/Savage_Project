@@ -1,2 +1,2 @@
 # Winner Prediction in UFC Title Fights
-![alt text](https://media.istockphoto.com/photos/great-white-shark-breaching-in-an-attack-picture-id508219636?k=20&m=508219636&s=612x612&w=0&h=5LoanBwu_fCBIeHUGXClAJWXMQ98AdFAtzAkdnA3RKQ=)
+![alt text](https://cdn.vox-cdn.com/thumbor/y5Sk1lzpHnW3q_1KAR5lGsXYctQ=/0x0:3600x2400/1200x800/filters:focal(1512x912:2088x1488)/cdn.vox-cdn.com/uploads/chorus_image/image/69873119/1232507900.0.jpg)
