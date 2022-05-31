@@ -4,7 +4,7 @@
 
 ## Intro
 
-In this project, I apply a ETL method for all UFC fighters and all the fights between 1994 and 2021. With all the data cleaned and transformated, I have used Random Forest model to make predictions of a fight between two fighters to select. In this case, I predicted the winner in Glover Teixeira vs Jiri Prochazka, Valentina Schevchenko vs Taila Santos and Alexander Volkanovski vs Max Holloway, all of them are title fights in June 2022.
+In this project, I apply a ETL method for all UFC fighters and all the fights between 1994 and 2021. With all the data cleaned and transformated, I use Random Forest model to make predictions of a fight between two fighters to select. In this case, I predicted the winner in Glover Teixeira vs Jiri Prochazka (fight1), Valentina Schevchenko vs Taila Santos (fight2) and Alexander Volkanovski vs Max Holloway (fight3), all of them are title fights in June 2022. I finally maked a Tableau visualization of specific measurements of fight1 and a comparison between my predictions in fight1, fight2 and fight3, and betting shops predictions.
 
 ## Data
 
