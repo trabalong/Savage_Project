@@ -133,7 +133,6 @@ def clean_fighters(fighter,ufc_fighters):
     x.Reach_cm = x.Reach_cm.fillna(x.Reach_cm.median())
     x.Stance = x.Stance.fillna('Unknown')
 
-
     x['DOB'] = x['DOB'].fillna(0)
 
     x.insert(0, 'fighter_id', [i for i in range(len(x))])
