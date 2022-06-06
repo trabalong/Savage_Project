@@ -38,3 +38,14 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 
 - https://www.kaggle.com/datasets/rajeevw/ufcdata
 - https://www.ufcespanol.com/
+- https://pandas.pydata.org/
+- https://selenium-python.readthedocs.io/
+- https://docs.python.org/3/library/time.html
+- https://docs.python.org/3/library/warnings.html
+- https://numpy.org/
+- https://matplotlib.org/stable/tutorials/introductory/pyplot.html
+- https://seaborn.pydata.org/
+- https://docs.python.org/3/library/re.html
+- https://dev.mysql.com/doc/connector-python/en/
+- https://scikit-learn.org/
+- https://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/intro.html
