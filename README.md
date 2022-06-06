@@ -26,4 +26,10 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 
 ## Notebook Main
 
+1. ETL of UFC fighters.
+2. ETL of UFC fights.
+3. Load Database to MySQL for work Tableau.
+4. Transforms data for learning and predicting.
+5. In comment, another ways for prediction (Logistic Regression, Random Forest and H20).
+
 ## Resources
