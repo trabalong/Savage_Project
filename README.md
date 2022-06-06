@@ -1,6 +1,6 @@
 # Winner Prediction in UFC Title Fights
 
-<img src="https://soaldar.com/wp-content/uploads/2020/05/ultimate-fighting-championship-ufc-logo.png" alt="drawing" width="400"/>
+<img src="https://soaldar.com/wp-content/uploads/2020/05/ultimate-fighting-championship-ufc-logo.png" alt="drawing" width="600"/>
 
 ## Intro
 
@@ -32,7 +32,7 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 4. Transforms data for learning and predicting.
 5. In comment, another ways for prediction (Logistic Regression, Random Forest and H2O).
 
-<img src="https://github.com/trabalong/Savage_Project/blob/main/img/GTvsJP_measurements.png" alt="drawing" width="400"/>
+<img src="https://github.com/trabalong/Savage_Project/blob/main/img/GTvsJP_measurements.png" alt="drawing" width="800"/>
 
 ## Resources
 
