@@ -8,7 +8,7 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 
 ## Data
 
-- `data.csv` dataset with all the fights of company between 1994 and 2021. Each fight has information about the event, the fighters, their features and the measurements which were obtained in the fight.
+- `data.csv` dataset with all the fights of company between 1994 and 2021. Each fight has information about the event, the fighters, their features and the measurements that were obtained in the fight.
 - `raw_fighter_details.csv`
 - `ufc_fighters_official.csv`
 - `ufc_fighters_styles.csv`
