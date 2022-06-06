@@ -17,7 +17,11 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 
 - `load_ufc_fighters()` scraping all the fighters on UFC catalog by weight-class and upload a csv with the information.
 - `load_ufc_fighters_styles()` scraping all the fighters on UFC catalog by fight's style and upload a csv with the information.
-- `clean_fighters(fighter, ufc_fighters)` join all the information between fighters dataset from Kaggle and fighters dataset from scraping. It also transforms and cleans some columns.
+- `clean_fighters(fighter, ufc_fighters)` joins all the information between fighters dataset from Kaggle and fighters dataset from scraping. It also transforms and cleans some columns.
+- `set_names_upper(data)` makes names upper for a better strings work.
+- `set_name_winner(data)` changes Winner column values (Blue or Red) by the name of the winner.
+- `fix_columns(data)` transforms and cleans columns.
+- `set_nan_columns(data)` fills nan and renames columns.
 
 ## Notebook Main
 
