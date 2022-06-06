@@ -36,5 +36,5 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 
 ## Resources
 
-https://www.kaggle.com/datasets/rajeevw/ufcdata
-https://www.ufcespanol.com/
+- https://www.kaggle.com/datasets/rajeevw/ufcdata
+- https://www.ufcespanol.com/
