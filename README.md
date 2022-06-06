@@ -30,6 +30,11 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 2. ETL of UFC fights.
 3. Load Database to MySQL for work Tableau.
 4. Transforms data for learning and predicting.
-5. In comment, another ways for prediction (Logistic Regression, Random Forest and H20).
+5. In comment, another ways for prediction (Logistic Regression, Random Forest and H2O).
+
+<img src="https://github.com/trabalong/Savage_Project/blob/main/img/GTvsJP_measurements.png" alt="drawing" width="400"/>
 
 ## Resources
+
+https://www.kaggle.com/datasets/rajeevw/ufcdata
+https://www.ufcespanol.com/
