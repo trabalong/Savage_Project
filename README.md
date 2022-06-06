@@ -8,8 +8,8 @@ In this project, I apply a ETL method for all UFC fighters and all the fights be
 
 ## Data
 
-- `data.csv` dataset with all the fights of company between 1994 and 2021. Each fight has information about the event, the fighters, their features and the measurements that were obtained in the fight.
-- `raw_fighter_details.csv`
+- `data.csv` dataset got from Kaggle with all the fights of company between 1994 and 2021. Each sample has information about the fight, the fighters, their features and the measurements that were obtained in the fight.
+- `raw_fighter_details.csv` dataset got from Kaggle with all the fighters that participate in the fights. Each sample is a fighter, his features and the average of all measurements that he/she got in all the fights.
 - `ufc_fighters_official.csv`
 - `ufc_fighters_styles.csv`
 
